@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.xiaoheihe.dao.DemoMapper">
+    <resultMap id="BaseResultMap" type="com.example.xiaoheihe.domain.Demo">
+        <id property="mRID" column="mrid"/>
+        <result property="remark" column="remark"/>
+        <result property="creator" column="creator"/>
+        <result property="dmlCode" column="dmlcode"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+    </resultMap>
+
+    <sql id="BaseSql">
+        select
+        mrid,remark,creator,dmlcode,create_time,update_time
+        from demo
+    </sql>
+
+
+    <select id="selectDemoList" resultMap="BaseResultMap">
+        <include refid="BaseSql"/>
+        <where>
+            dmlcode != 'd'
+            <if test="mRID != null and mRID != ''">
+                and mrid = #{mRID}
+            </if>
+        </where>
+        order by create_time desc
+        limit 0,20
+    </select>
+
+    <select id="selectCount" resultType="integer">
+        select count(*)
+        from demo
+        <where>
+            dmlcode != 'd'
+            <if test="mRID != null and mRID != ''">
+                mrid = #{mRID}
+            </if>
+        </where>
+    </select>
+</mapper>
