@@ -12,9 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.File;
 import java.io.IOException;
-import java.util.HashMap;
+import java.io.InputStream;
 
 
 @RestController
@@ -30,12 +29,10 @@ public class DemoController {
 
     @RequestMapping("/download")
     public void download(HttpServletRequest request,HttpServletResponse response) throws IOException {
-        File file = new File("application.yml");
-        DownloadUtils.download(request,response,file);
+        InputStream resourceAsStream = this.getClass().getClassLoader().getResourceAsStream("application-dev.yml");
+        assert resourceAsStream != null;
+        DownloadUtils.download(request,response,resourceAsStream,"application-dev.yml");
 
-
-        HashMap<Object, Object> map = new HashMap<>();
-        map.forEach((k,v)->{});
     }
 
 }
