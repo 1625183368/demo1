@@ -1,18 +1,12 @@
-package com.example.xiaoheihe.domain;
+package com.example.xiaoheihe.TestMain;
 
-import org.apache.logging.log4j.util.PropertySource;
 import org.springframework.util.*;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.time.DayOfWeek;
-import java.time.LocalDateTime;
-import java.time.temporal.TemporalAdjuster;
-import java.time.temporal.TemporalAdjusters;
 import java.util.*;
 import java.util.function.Predicate;
-import java.util.stream.Collectors;
 
 public class Demo01Fun {
 
@@ -66,7 +60,7 @@ public class Demo01Fun {
         if (declaredFields.length > 0){
             for (Field field : declaredFields){
                 field.setAccessible(true);
-                if (field.getType().getName().contains("String")){
+                if (field.getType().getSimpleName().equals("String")){
                     Method method = aClass.getMethod("set" + StringUtils.capitalize(field.getName()),String.class);
                     method.invoke(t,"refectString");
                 }

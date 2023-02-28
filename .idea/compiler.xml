@@ -6,11 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="message-kafka" />
         <module name="xiaoheihe" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="demo1" target="1.8" />
+      <module name="message-kafka" target="1.8" />
       <module name="xiaoheihe" target="8" />
     </bytecodeTargetLevel>
   </component>

@@ -28,7 +28,9 @@
         <mysql-version>8.0.32</mysql-version>
 <!--        <start-test-version>3.0.2</start-test-version>-->
         <security-test-version>6.0.1</security-test-version>
+        <itext-version>2.1.5</itext-version>
         <druid.version>1.2.6</druid.version>
+        <poi-tl-version>1.10.0</poi-tl-version>
     </properties>
     <dependencies>
         <dependency>
@@ -82,6 +84,26 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.lowagie</groupId>
+            <artifactId>itext</artifactId>
+            <version>${itext-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.lowagie</groupId>
+            <artifactId>itext-rups</artifactId>
+            <version>${itext-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.lowagie</groupId>
+            <artifactId>itext-rtf</artifactId>
+            <version>${itext-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.deepoove</groupId>
+            <artifactId>poi-tl</artifactId>
+            <version>${poi-tl-version}</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -90,7 +112,30 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-shade-plugin</artifactId>-->
+<!--                <version>3.2.4</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <phase>package</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>shade</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <createDependencyReducedPom>true</createDependencyReducedPom>-->
+<!--                            <relocations>-->
+<!--                                <relocation>-->
+<!--                                    &lt;!&ndash; 改名前 &ndash;&gt;-->
+<!--                                    <pattern>org.apache.poi</pattern>-->
+<!--                                    &lt;!&ndash; 改名后 &ndash;&gt;-->
+<!--                                    <shadedPattern>shaded.org.apache.poi</shadedPattern>-->
+<!--                                </relocation>-->
+<!--                            </relocations>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
         </plugins>
     </build>
-
 </project>
