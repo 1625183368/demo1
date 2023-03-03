@@ -6,19 +6,22 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="message-kafka" />
         <module name="xiaoheihe" />
+        <module name="message-kafka" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="demo" target="17" />
       <module name="demo1" target="1.8" />
-      <module name="message-kafka" target="1.8" />
+      <module name="message-kafka" target="8" />
       <module name="xiaoheihe" target="8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="demo" options="-parameters" />
       <module name="demo1" options="" />
+      <module name="message-kafka" options="-parameters" />
       <module name="xiaoheihe" options="-parameters" />
     </option>
   </component>

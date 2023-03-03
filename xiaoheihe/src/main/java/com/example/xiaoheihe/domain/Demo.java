@@ -1,6 +1,10 @@
 package com.example.xiaoheihe.domain;
 
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
+
 import java.util.Date;
+
 
 public class Demo {
     private String mRID;

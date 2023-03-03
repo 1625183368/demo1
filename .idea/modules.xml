@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/demo1.iml" filepath="$PROJECT_DIR$/demo1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/message-kafka/message-kafka.iml" filepath="$PROJECT_DIR$/message-kafka/message-kafka.iml" />
       <module fileurl="file://$PROJECT_DIR$/xiaoheihe/xiaoheihe.iml" filepath="$PROJECT_DIR$/xiaoheihe/xiaoheihe.iml" />
     </modules>
   </component>

@@ -17,6 +17,7 @@
 
     <modules>
         <module>xiaoheihe</module>
+<!--        <module>message-kafka</module>-->
     </modules>
     <properties>
 <!--        <java.version>8</java.version>-->

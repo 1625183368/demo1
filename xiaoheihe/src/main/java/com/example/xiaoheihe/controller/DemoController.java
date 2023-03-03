@@ -6,6 +6,7 @@ import com.example.xiaoheihe.resultEntity.Result;
 import com.example.xiaoheihe.service.DemoService;
 import com.example.xiaoheihe.utils.DownloadUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,17 +23,23 @@ public class DemoController {
     @Autowired
     private DemoService demoService;
 
-    @RequestMapping("/getDemoList")
+    @PostMapping("/getDemoList")
     public Result list(@RequestBody Demo demo){
         return Result.success(demoService.getDemoList(demo));
     }
 
-    @RequestMapping("/download")
+    @PostMapping("/download")
     public void download(HttpServletRequest request,HttpServletResponse response) throws IOException {
         InputStream resourceAsStream = this.getClass().getClassLoader().getResourceAsStream("application-dev.yml");
         assert resourceAsStream != null;
         DownloadUtils.download(request,response,resourceAsStream,"application-dev.yml");
 
+    }
+
+    @PostMapping("/testGlobalException")
+    public void testGlobalException(){
+        int i = 10/0;
+        System.out.println(i);
     }
 
 }
