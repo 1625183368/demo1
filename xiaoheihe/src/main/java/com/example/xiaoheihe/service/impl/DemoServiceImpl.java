@@ -1,4 +1,4 @@
-package com.example.xiaoheihe.service;
+package com.example.xiaoheihe.service.impl;
 
 
 import com.example.xiaoheihe.config.annotation.DataSource;
@@ -6,6 +6,7 @@ import com.example.xiaoheihe.constants.SqlConstant;
 import com.example.xiaoheihe.dao.DemoMapper;
 import com.example.xiaoheihe.domain.Demo;
 import com.example.xiaoheihe.enums.DataSourceType;
+import com.example.xiaoheihe.service.DemoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -15,7 +16,7 @@ import java.util.List;
 import java.util.Map;
 
 @Service
-public class DemoServiceImpl implements DemoService{
+public class DemoServiceImpl implements DemoService {
 
     @Autowired
     private DemoMapper demoMapper;

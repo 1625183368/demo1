@@ -5,7 +5,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Date;
 
-
 public class Demo {
     private String mRID;
     private String remark;
@@ -60,5 +59,18 @@ public class Demo {
 
     public void setDmlCode(String dmlCode) {
         this.dmlCode = dmlCode;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Demo{" +
+                "mRID='" + mRID + '\'' +
+                ", remark='" + remark + '\'' +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                ", creator='" + creator + '\'' +
+                ", dmlCode='" + dmlCode + '\'' +
+                '}';
     }
 }

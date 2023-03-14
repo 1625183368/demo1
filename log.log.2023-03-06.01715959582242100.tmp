@@ -1,0 +1,1008 @@
+2023-03-06 15:22:28.884  INFO 10436 --- [SpringContextShutdownHook] c.e.x.config.listener.DemoListener       : 销毁servlet
+2023-03-06 15:22:29.009  INFO 10436 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-03-06 15:22:29.010  INFO 10436 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-03-06 15:22:29.166  INFO 10436 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-03-06 15:22:39.568  INFO 24196 --- [main] com.example.xiaoheihe.Application        : Starting Application on DESKTOP-V5V13C7 with PID 24196 (D:\soft\workSpace\demo1\xiaoheihe\target\classes started by Administrator in D:\soft\workSpace\demo1)
+2023-03-06 15:22:39.573 DEBUG 24196 --- [main] com.example.xiaoheihe.Application        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2023-03-06 15:22:39.574  INFO 24196 --- [main] com.example.xiaoheihe.Application        : The following profiles are active: dev
+2023-03-06 15:22:40.163  INFO 24196 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-03-06 15:22:40.165  INFO 24196 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-03-06 15:22:40.198  INFO 24196 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18ms. Found 0 Redis repository interfaces.
+2023-03-06 15:22:40.775  INFO 24196 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8786 (http)
+2023-03-06 15:22:40.783  INFO 24196 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-06 15:22:40.783  INFO 24196 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2023-03-06 15:22:40.869  INFO 24196 --- [main] o.a.c.c.C.[.[localhost].[/xiaoheihe]     : Initializing Spring embedded WebApplicationContext
+2023-03-06 15:22:40.869  INFO 24196 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1232 ms
+2023-03-06 15:22:40.927  INFO 24196 --- [main] c.e.x.config.listener.DemoListener       : 初始化servlet
+2023-03-06 15:22:41.725  WARN 24196 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [com/example/xiaoheihe/config/security/SpringSecurityConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.NullPointerException
+2023-03-06 15:22:41.725  INFO 24196 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-03-06 15:22:41.736  INFO 24196 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-03-06 15:22:41.738  INFO 24196 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-03-06 15:22:41.740  INFO 24196 --- [main] c.e.x.config.listener.DemoListener       : 销毁servlet
+2023-03-06 15:22:41.751  INFO 24196 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-03-06 15:22:41.762 ERROR 24196 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [com/example/xiaoheihe/config/security/SpringSecurityConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:483) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:311) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at com.example.xiaoheihe.Application.main(Application.java:20) [classes/:na]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	... 22 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration.springSecurityFilterChain(WebSecurityConfiguration.java:100) ~[spring-security-config-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at com.example.xiaoheihe.config.security.SpringSecurityConfig$$EnhancerBySpringCGLIB$$320b0106.CGLIB$springSecurityFilterChain$7(<generated>) ~[classes/:na]
+	at com.example.xiaoheihe.config.security.SpringSecurityConfig$$EnhancerBySpringCGLIB$$320b0106$$FastClassBySpringCGLIB$$ab07c4ab.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at com.example.xiaoheihe.config.security.SpringSecurityConfig$$EnhancerBySpringCGLIB$$320b0106.springSecurityFilterChain(<generated>) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_291]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_291]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_291]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_291]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	... 23 common frames omitted
+
+2023-03-06 15:24:16.421  INFO 12872 --- [main] com.example.xiaoheihe.Application        : Starting Application on DESKTOP-V5V13C7 with PID 12872 (D:\soft\workSpace\demo1\xiaoheihe\target\classes started by Administrator in D:\soft\workSpace\demo1)
+2023-03-06 15:24:16.423 DEBUG 12872 --- [main] com.example.xiaoheihe.Application        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2023-03-06 15:24:16.424  INFO 12872 --- [main] com.example.xiaoheihe.Application        : The following profiles are active: dev
+2023-03-06 15:24:17.008  INFO 12872 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-03-06 15:24:17.009  INFO 12872 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-03-06 15:24:17.036  INFO 12872 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 Redis repository interfaces.
+2023-03-06 15:24:17.597  INFO 12872 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8786 (http)
+2023-03-06 15:24:17.604  INFO 12872 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-06 15:24:17.604  INFO 12872 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2023-03-06 15:24:17.691  INFO 12872 --- [main] o.a.c.c.C.[.[localhost].[/xiaoheihe]     : Initializing Spring embedded WebApplicationContext
+2023-03-06 15:24:17.691  INFO 12872 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1230 ms
+2023-03-06 15:24:17.751  INFO 12872 --- [main] c.e.x.config.listener.DemoListener       : 初始化servlet
+2023-03-06 15:24:18.394  WARN 12872 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [com/example/xiaoheihe/config/security/SpringSecurityConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.NullPointerException
+2023-03-06 15:24:18.394  INFO 12872 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-03-06 15:24:18.404  INFO 12872 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-03-06 15:24:18.411  INFO 12872 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-03-06 15:24:18.413  INFO 12872 --- [main] c.e.x.config.listener.DemoListener       : 销毁servlet
+2023-03-06 15:24:18.425  INFO 12872 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-03-06 15:24:18.434 ERROR 12872 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [com/example/xiaoheihe/config/security/SpringSecurityConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:483) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:311) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at com.example.xiaoheihe.Application.main(Application.java:20) [classes/:na]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	... 22 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration.springSecurityFilterChain(WebSecurityConfiguration.java:100) ~[spring-security-config-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at com.example.xiaoheihe.config.security.SpringSecurityConfig$$EnhancerBySpringCGLIB$$efe6b8f7.CGLIB$springSecurityFilterChain$6(<generated>) ~[classes/:na]
+	at com.example.xiaoheihe.config.security.SpringSecurityConfig$$EnhancerBySpringCGLIB$$efe6b8f7$$FastClassBySpringCGLIB$$be23b8c.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at com.example.xiaoheihe.config.security.SpringSecurityConfig$$EnhancerBySpringCGLIB$$efe6b8f7.springSecurityFilterChain(<generated>) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_291]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_291]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_291]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_291]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	... 23 common frames omitted
+
+2023-03-06 15:24:39.321  INFO 10392 --- [main] com.example.xiaoheihe.Application        : Starting Application on DESKTOP-V5V13C7 with PID 10392 (D:\soft\workSpace\demo1\xiaoheihe\target\classes started by Administrator in D:\soft\workSpace\demo1)
+2023-03-06 15:24:39.323 DEBUG 10392 --- [main] com.example.xiaoheihe.Application        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2023-03-06 15:24:39.323  INFO 10392 --- [main] com.example.xiaoheihe.Application        : The following profiles are active: dev
+2023-03-06 15:24:39.872  INFO 10392 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-03-06 15:24:39.874  INFO 10392 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-03-06 15:24:39.900  INFO 10392 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 Redis repository interfaces.
+2023-03-06 15:24:40.463  INFO 10392 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8786 (http)
+2023-03-06 15:24:40.470  INFO 10392 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-06 15:24:40.470  INFO 10392 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2023-03-06 15:24:40.556  INFO 10392 --- [main] o.a.c.c.C.[.[localhost].[/xiaoheihe]     : Initializing Spring embedded WebApplicationContext
+2023-03-06 15:24:40.557  INFO 10392 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1193 ms
+2023-03-06 15:24:40.617  INFO 10392 --- [main] c.e.x.config.listener.DemoListener       : 初始化servlet
+2023-03-06 15:24:41.258  WARN 10392 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [com/example/xiaoheihe/config/security/SpringSecurityConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.NullPointerException
+2023-03-06 15:24:41.259  INFO 10392 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-03-06 15:24:41.275  INFO 10392 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-03-06 15:24:41.277  INFO 10392 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-03-06 15:24:41.278  INFO 10392 --- [main] c.e.x.config.listener.DemoListener       : 销毁servlet
+2023-03-06 15:24:41.290  INFO 10392 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-03-06 15:24:41.299 ERROR 10392 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [com/example/xiaoheihe/config/security/SpringSecurityConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:483) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:311) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at com.example.xiaoheihe.Application.main(Application.java:20) [classes/:na]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	... 22 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration.springSecurityFilterChain(WebSecurityConfiguration.java:100) ~[spring-security-config-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at com.example.xiaoheihe.config.security.SpringSecurityConfig$$EnhancerBySpringCGLIB$$320b0106.CGLIB$springSecurityFilterChain$2(<generated>) ~[classes/:na]
+	at com.example.xiaoheihe.config.security.SpringSecurityConfig$$EnhancerBySpringCGLIB$$320b0106$$FastClassBySpringCGLIB$$ab07c4ab.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at com.example.xiaoheihe.config.security.SpringSecurityConfig$$EnhancerBySpringCGLIB$$320b0106.springSecurityFilterChain(<generated>) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_291]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_291]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_291]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_291]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	... 23 common frames omitted
+
+2023-03-06 15:25:01.466  INFO 18584 --- [main] com.example.xiaoheihe.Application        : Starting Application on DESKTOP-V5V13C7 with PID 18584 (D:\soft\workSpace\demo1\xiaoheihe\target\classes started by Administrator in D:\soft\workSpace\demo1)
+2023-03-06 15:25:01.468 DEBUG 18584 --- [main] com.example.xiaoheihe.Application        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2023-03-06 15:25:01.469  INFO 18584 --- [main] com.example.xiaoheihe.Application        : The following profiles are active: dev
+2023-03-06 15:25:01.999  INFO 18584 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-03-06 15:25:02.000  INFO 18584 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-03-06 15:25:02.027  INFO 18584 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17ms. Found 0 Redis repository interfaces.
+2023-03-06 15:25:02.537  INFO 18584 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8786 (http)
+2023-03-06 15:25:02.542  INFO 18584 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-06 15:25:02.542  INFO 18584 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2023-03-06 15:25:02.629  INFO 18584 --- [main] o.a.c.c.C.[.[localhost].[/xiaoheihe]     : Initializing Spring embedded WebApplicationContext
+2023-03-06 15:25:02.629  INFO 18584 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1114 ms
+2023-03-06 15:25:02.695  INFO 18584 --- [main] c.e.x.config.listener.DemoListener       : 初始化servlet
+2023-03-06 15:25:03.210  WARN 18584 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [com/example/xiaoheihe/config/security/SpringSecurityConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.NullPointerException
+2023-03-06 15:25:03.210  INFO 18584 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-03-06 15:25:03.219  INFO 18584 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-03-06 15:25:03.221  INFO 18584 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-03-06 15:25:03.222  INFO 18584 --- [main] c.e.x.config.listener.DemoListener       : 销毁servlet
+2023-03-06 15:25:03.232  INFO 18584 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-03-06 15:25:03.240 ERROR 18584 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [com/example/xiaoheihe/config/security/SpringSecurityConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:483) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:311) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at com.example.xiaoheihe.Application.main(Application.java:20) [classes/:na]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	... 22 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration.springSecurityFilterChain(WebSecurityConfiguration.java:100) ~[spring-security-config-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at com.example.xiaoheihe.config.security.SpringSecurityConfig$$EnhancerBySpringCGLIB$$9e89f0b2.CGLIB$springSecurityFilterChain$6(<generated>) ~[classes/:na]
+	at com.example.xiaoheihe.config.security.SpringSecurityConfig$$EnhancerBySpringCGLIB$$9e89f0b2$$FastClassBySpringCGLIB$$afaa2f7a.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at com.example.xiaoheihe.config.security.SpringSecurityConfig$$EnhancerBySpringCGLIB$$9e89f0b2.springSecurityFilterChain(<generated>) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_291]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_291]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_291]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_291]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	... 23 common frames omitted
+
+2023-03-06 15:28:15.301  INFO 19668 --- [main] com.example.xiaoheihe.Application        : Starting Application on DESKTOP-V5V13C7 with PID 19668 (D:\soft\workSpace\demo1\xiaoheihe\target\classes started by Administrator in D:\soft\workSpace\demo1)
+2023-03-06 15:28:15.304 DEBUG 19668 --- [main] com.example.xiaoheihe.Application        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2023-03-06 15:28:15.304  INFO 19668 --- [main] com.example.xiaoheihe.Application        : The following profiles are active: dev
+2023-03-06 15:28:15.867  INFO 19668 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-03-06 15:28:15.869  INFO 19668 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-03-06 15:28:15.895  INFO 19668 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15ms. Found 0 Redis repository interfaces.
+2023-03-06 15:28:16.427  INFO 19668 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8786 (http)
+2023-03-06 15:28:16.434  INFO 19668 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-06 15:28:16.434  INFO 19668 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2023-03-06 15:28:16.525  INFO 19668 --- [main] o.a.c.c.C.[.[localhost].[/xiaoheihe]     : Initializing Spring embedded WebApplicationContext
+2023-03-06 15:28:16.525  INFO 19668 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1165 ms
+2023-03-06 15:28:16.587  INFO 19668 --- [main] c.e.x.config.listener.DemoListener       : 初始化servlet
+2023-03-06 15:28:17.357  INFO 19668 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-06 15:28:17.782  INFO 19668 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@33a71d23, org.springframework.security.web.context.SecurityContextPersistenceFilter@1c0e4262, org.springframework.security.web.header.HeaderWriterFilter@29c25bbc, org.springframework.security.web.authentication.logout.LogoutFilter@6533629, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@60844992, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@38cb1606, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5f2b9da8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@23c05889, org.springframework.security.web.session.SessionManagementFilter@4aeaff64, org.springframework.security.web.access.ExceptionTranslationFilter@121cf6f4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5bd3ca3c]
+2023-03-06 15:28:17.842  INFO 19668 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8786 (http) with context path '/xiaoheihe'
+2023-03-06 15:28:17.851  INFO 19668 --- [main] com.example.xiaoheihe.Application        : Started Application in 2.989 seconds (JVM running for 3.59)
+2023-03-06 15:28:30.798  INFO 19668 --- [http-nio-8786-exec-1] o.a.c.c.C.[.[localhost].[/xiaoheihe]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-06 15:28:30.798  INFO 19668 --- [http-nio-8786-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-06 15:28:30.806  INFO 19668 --- [http-nio-8786-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2023-03-06 15:31:44.789  INFO 19668 --- [SpringContextShutdownHook] c.e.x.config.listener.DemoListener       : 销毁servlet
+2023-03-06 15:31:44.836  INFO 19668 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-03-06 15:31:44.836  INFO 19668 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-03-06 15:31:44.850  INFO 19668 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-03-06 15:31:48.932  INFO 23576 --- [main] com.example.xiaoheihe.Application        : Starting Application on DESKTOP-V5V13C7 with PID 23576 (D:\soft\workSpace\demo1\xiaoheihe\target\classes started by Administrator in D:\soft\workSpace\demo1)
+2023-03-06 15:31:48.934 DEBUG 23576 --- [main] com.example.xiaoheihe.Application        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2023-03-06 15:31:48.934  INFO 23576 --- [main] com.example.xiaoheihe.Application        : The following profiles are active: dev
+2023-03-06 15:31:49.514  INFO 23576 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-03-06 15:31:49.516  INFO 23576 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-03-06 15:31:49.543  INFO 23576 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17ms. Found 0 Redis repository interfaces.
+2023-03-06 15:31:50.072  INFO 23576 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8786 (http)
+2023-03-06 15:31:50.079  INFO 23576 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-06 15:31:50.079  INFO 23576 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2023-03-06 15:31:50.161  INFO 23576 --- [main] o.a.c.c.C.[.[localhost].[/xiaoheihe]     : Initializing Spring embedded WebApplicationContext
+2023-03-06 15:31:50.162  INFO 23576 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1177 ms
+2023-03-06 15:31:50.231  INFO 23576 --- [main] c.e.x.config.listener.DemoListener       : 初始化servlet
+2023-03-06 15:31:50.996  INFO 23576 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-06 15:31:51.439  INFO 23576 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6b751cb1, org.springframework.security.web.context.SecurityContextPersistenceFilter@22ae32ba, org.springframework.security.web.header.HeaderWriterFilter@592cb470, org.springframework.security.web.authentication.logout.LogoutFilter@30c8c6ab, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7c0e4e4e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@ccd000e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5f3f57ff, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@df9d400, org.springframework.security.web.session.SessionManagementFilter@15d79b70, org.springframework.security.web.access.ExceptionTranslationFilter@4b360972, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2a42019a]
+2023-03-06 15:31:51.521  INFO 23576 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8786 (http) with context path '/xiaoheihe'
+2023-03-06 15:31:51.534  INFO 23576 --- [main] com.example.xiaoheihe.Application        : Started Application in 2.988 seconds (JVM running for 3.616)
+2023-03-06 15:32:08.127  INFO 23576 --- [http-nio-8786-exec-5] o.a.c.c.C.[.[localhost].[/xiaoheihe]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-06 15:32:08.127  INFO 23576 --- [http-nio-8786-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-06 15:32:08.134  INFO 23576 --- [http-nio-8786-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2023-03-06 15:33:24.422  INFO 23576 --- [SpringContextShutdownHook] c.e.x.config.listener.DemoListener       : 销毁servlet
+2023-03-06 15:33:24.468  INFO 23576 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-03-06 15:33:24.468  INFO 23576 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-03-06 15:33:24.479  INFO 23576 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-03-06 15:33:28.303  INFO 15072 --- [main] com.example.xiaoheihe.Application        : Starting Application on DESKTOP-V5V13C7 with PID 15072 (D:\soft\workSpace\demo1\xiaoheihe\target\classes started by Administrator in D:\soft\workSpace\demo1)
+2023-03-06 15:33:28.305 DEBUG 15072 --- [main] com.example.xiaoheihe.Application        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2023-03-06 15:33:28.305  INFO 15072 --- [main] com.example.xiaoheihe.Application        : The following profiles are active: dev
+2023-03-06 15:33:28.888  INFO 15072 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-03-06 15:33:28.890  INFO 15072 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-03-06 15:33:28.916  INFO 15072 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17ms. Found 0 Redis repository interfaces.
+2023-03-06 15:33:29.487  INFO 15072 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8786 (http)
+2023-03-06 15:33:29.495  INFO 15072 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-06 15:33:29.495  INFO 15072 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2023-03-06 15:33:29.586  INFO 15072 --- [main] o.a.c.c.C.[.[localhost].[/xiaoheihe]     : Initializing Spring embedded WebApplicationContext
+2023-03-06 15:33:29.587  INFO 15072 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1220 ms
+2023-03-06 15:33:29.646  INFO 15072 --- [main] c.e.x.config.listener.DemoListener       : 初始化servlet
+2023-03-06 15:33:30.419  INFO 15072 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-06 15:33:30.801  INFO 15072 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3cb04dd, org.springframework.security.web.context.SecurityContextPersistenceFilter@6921cfa, org.springframework.security.web.header.HeaderWriterFilter@195498aa, org.springframework.security.web.authentication.logout.LogoutFilter@579f3c8e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1f48fa72, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@15d79b70, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6c66ddab, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@73d91faf, org.springframework.security.web.session.SessionManagementFilter@40a28bda, org.springframework.security.web.access.ExceptionTranslationFilter@1c8f71a7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2493eec6]
+2023-03-06 15:33:30.854  INFO 15072 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8786 (http) with context path '/xiaoheihe'
+2023-03-06 15:33:30.861  INFO 15072 --- [main] com.example.xiaoheihe.Application        : Started Application in 2.927 seconds (JVM running for 3.54)
+2023-03-06 15:33:39.485  INFO 15072 --- [http-nio-8786-exec-1] o.a.c.c.C.[.[localhost].[/xiaoheihe]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-06 15:33:39.486  INFO 15072 --- [http-nio-8786-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-06 15:33:39.492  INFO 15072 --- [http-nio-8786-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2023-03-06 15:37:42.996  INFO 15072 --- [SpringContextShutdownHook] c.e.x.config.listener.DemoListener       : 销毁servlet
+2023-03-06 15:37:43.042  INFO 15072 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-03-06 15:37:43.042  INFO 15072 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-03-06 15:37:43.055  INFO 15072 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-03-06 15:37:46.651  INFO 22880 --- [main] com.example.xiaoheihe.Application        : Starting Application on DESKTOP-V5V13C7 with PID 22880 (D:\soft\workSpace\demo1\xiaoheihe\target\classes started by Administrator in D:\soft\workSpace\demo1)
+2023-03-06 15:37:46.653 DEBUG 22880 --- [main] com.example.xiaoheihe.Application        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2023-03-06 15:37:46.654  INFO 22880 --- [main] com.example.xiaoheihe.Application        : The following profiles are active: dev
+2023-03-06 15:37:47.237  INFO 22880 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-03-06 15:37:47.238  INFO 22880 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-03-06 15:37:47.269  INFO 22880 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18ms. Found 0 Redis repository interfaces.
+2023-03-06 15:37:47.861  INFO 22880 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8786 (http)
+2023-03-06 15:37:47.868  INFO 22880 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-06 15:37:47.869  INFO 22880 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2023-03-06 15:37:47.950  INFO 22880 --- [main] o.a.c.c.C.[.[localhost].[/xiaoheihe]     : Initializing Spring embedded WebApplicationContext
+2023-03-06 15:37:47.950  INFO 22880 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1251 ms
+2023-03-06 15:37:48.012  INFO 22880 --- [main] c.e.x.config.listener.DemoListener       : 初始化servlet
+2023-03-06 15:37:48.870  INFO 22880 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-06 15:37:49.271  INFO 22880 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@75805562, org.springframework.security.web.context.SecurityContextPersistenceFilter@7c31e410, org.springframework.security.web.header.HeaderWriterFilter@3fd5d679, org.springframework.security.web.authentication.logout.LogoutFilter@30fa8a6b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@60a6840c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4e8afdad, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@65d90b7f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@13d984ee, org.springframework.security.web.session.SessionManagementFilter@62b786dc, org.springframework.security.web.access.ExceptionTranslationFilter@28519bfb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@216328b2]
+2023-03-06 15:37:49.327  INFO 22880 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8786 (http) with context path '/xiaoheihe'
+2023-03-06 15:37:49.334  INFO 22880 --- [main] com.example.xiaoheihe.Application        : Started Application in 3.179 seconds (JVM running for 3.946)
+2023-03-06 15:42:30.035  INFO 22880 --- [http-nio-8786-exec-2] o.a.c.c.C.[.[localhost].[/xiaoheihe]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-06 15:42:30.035  INFO 22880 --- [http-nio-8786-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-06 15:42:30.042  INFO 22880 --- [http-nio-8786-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2023-03-06 15:43:32.563  INFO 22880 --- [SpringContextShutdownHook] c.e.x.config.listener.DemoListener       : 销毁servlet
+2023-03-06 15:43:32.623  INFO 22880 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-03-06 15:43:32.623  INFO 22880 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-03-06 15:43:32.652  INFO 22880 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-03-06 15:43:37.159  INFO 2132 --- [main] com.example.xiaoheihe.Application        : Starting Application on DESKTOP-V5V13C7 with PID 2132 (D:\soft\workSpace\demo1\xiaoheihe\target\classes started by Administrator in D:\soft\workSpace\demo1)
+2023-03-06 15:43:37.161 DEBUG 2132 --- [main] com.example.xiaoheihe.Application        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2023-03-06 15:43:37.162  INFO 2132 --- [main] com.example.xiaoheihe.Application        : The following profiles are active: dev
+2023-03-06 15:43:37.830  INFO 2132 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-03-06 15:43:37.832  INFO 2132 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-03-06 15:43:37.859  INFO 2132 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 Redis repository interfaces.
+2023-03-06 15:43:38.427  INFO 2132 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8786 (http)
+2023-03-06 15:43:38.436  INFO 2132 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-06 15:43:38.436  INFO 2132 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2023-03-06 15:43:38.522  INFO 2132 --- [main] o.a.c.c.C.[.[localhost].[/xiaoheihe]     : Initializing Spring embedded WebApplicationContext
+2023-03-06 15:43:38.522  INFO 2132 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1292 ms
+2023-03-06 15:43:38.583  INFO 2132 --- [main] c.e.x.config.listener.DemoListener       : 初始化servlet
+2023-03-06 15:43:39.494  INFO 2132 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-06 15:43:39.869  INFO 2132 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@39a3984c, org.springframework.security.web.context.SecurityContextPersistenceFilter@7440265c, org.springframework.security.web.header.HeaderWriterFilter@6076c66, org.springframework.security.web.authentication.logout.LogoutFilter@18dac12f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@965bcbc, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@401ec794, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4404a6b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@48d44b46, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1d3a03fe, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@671da0f9, org.springframework.security.web.session.SessionManagementFilter@56b05bd7, org.springframework.security.web.access.ExceptionTranslationFilter@1ddf42dd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1b60d324]
+2023-03-06 15:43:39.925  INFO 2132 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8786 (http) with context path '/xiaoheihe'
+2023-03-06 15:43:39.932  INFO 2132 --- [main] com.example.xiaoheihe.Application        : Started Application in 3.199 seconds (JVM running for 3.904)
+2023-03-06 15:43:40.790  INFO 2132 --- [SpringContextShutdownHook] c.e.x.config.listener.DemoListener       : 销毁servlet
+2023-03-06 15:43:40.837  INFO 2132 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-03-06 15:43:40.838  INFO 2132 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-03-06 15:43:40.867  INFO 2132 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-03-06 15:43:45.001  INFO 2444 --- [main] com.example.xiaoheihe.Application        : Starting Application on DESKTOP-V5V13C7 with PID 2444 (D:\soft\workSpace\demo1\xiaoheihe\target\classes started by Administrator in D:\soft\workSpace\demo1)
+2023-03-06 15:43:45.003 DEBUG 2444 --- [main] com.example.xiaoheihe.Application        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2023-03-06 15:43:45.003  INFO 2444 --- [main] com.example.xiaoheihe.Application        : The following profiles are active: dev
+2023-03-06 15:43:45.551  INFO 2444 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-03-06 15:43:45.552  INFO 2444 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-03-06 15:43:45.578  INFO 2444 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 Redis repository interfaces.
+2023-03-06 15:43:46.117  INFO 2444 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8786 (http)
+2023-03-06 15:43:46.123  INFO 2444 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-06 15:43:46.124  INFO 2444 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2023-03-06 15:43:46.211  INFO 2444 --- [main] o.a.c.c.C.[.[localhost].[/xiaoheihe]     : Initializing Spring embedded WebApplicationContext
+2023-03-06 15:43:46.211  INFO 2444 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1167 ms
+2023-03-06 15:43:46.270  INFO 2444 --- [main] c.e.x.config.listener.DemoListener       : 初始化servlet
+2023-03-06 15:43:47.006  INFO 2444 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-06 15:43:47.392  INFO 2444 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5ddb302, org.springframework.security.web.context.SecurityContextPersistenceFilter@152e7703, org.springframework.security.web.header.HeaderWriterFilter@336e3be2, org.springframework.security.web.authentication.logout.LogoutFilter@478530cb, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1b444b5, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@48b3b1b8, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4b7ab7ab, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1e6d30c0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3f9f8d23, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@cf9bd1e, org.springframework.security.web.session.SessionManagementFilter@fd4459b, org.springframework.security.web.access.ExceptionTranslationFilter@22e813fc, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@70022d44]
+2023-03-06 15:43:47.444  INFO 2444 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8786 (http) with context path '/xiaoheihe'
+2023-03-06 15:43:47.451  INFO 2444 --- [main] com.example.xiaoheihe.Application        : Started Application in 2.813 seconds (JVM running for 3.488)
+2023-03-06 15:43:51.572  INFO 2444 --- [http-nio-8786-exec-2] o.a.c.c.C.[.[localhost].[/xiaoheihe]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-06 15:43:51.572  INFO 2444 --- [http-nio-8786-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-06 15:43:51.579  INFO 2444 --- [http-nio-8786-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2023-03-06 15:44:23.449  INFO 2444 --- [http-nio-8786-exec-3] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-03-06 15:44:23.916 DEBUG 2444 --- [http-nio-8786-exec-3] c.e.x.dao.UserMapper.selectUserList      : ==>  Preparing: select id,username,password,`name`,login_failed_times from `loginUser` where username = ? order by id limit 0,20
+2023-03-06 15:44:23.943 DEBUG 2444 --- [http-nio-8786-exec-3] c.e.x.dao.UserMapper.selectUserList      : ==> Parameters: admin(String)
+2023-03-06 15:44:24.043 ERROR 2444 --- [http-nio-8786-exec-3] w.a.UsernamePasswordAuthenticationFilter : An internal error occurred while trying to authenticate the user.
+
+org.springframework.security.authentication.InternalAuthenticationServiceException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Table 'test.loginuser' doesn't exist
+### The error may exist in file [D:\soft\workSpace\demo1\xiaoheihe\target\classes\mapper\UserMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select         id,username,password,`name`,login_failed_times         from `loginUser`                where  username = ?          order by id         limit 0,20
+### Cause: java.sql.SQLSyntaxErrorException: Table 'test.loginuser' doesn't exist
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Table 'test.loginuser' doesn't exist
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:123) ~[spring-security-core-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:144) ~[spring-security-core-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:199) ~[spring-security-core-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:219) ~[spring-security-core-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:95) ~[spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212) ~[spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) [spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92) [spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77) [spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) [spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) [spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) [spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) [spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) [spring-web-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) [spring-web-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_291]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_291]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_291]
+Caused by: org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Table 'test.loginuser' doesn't exist
+### The error may exist in file [D:\soft\workSpace\demo1\xiaoheihe\target\classes\mapper\UserMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select         id,username,password,`name`,login_failed_times         from `loginUser`                where  username = ?          order by id         limit 0,20
+### Cause: java.sql.SQLSyntaxErrorException: Table 'test.loginuser' doesn't exist
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Table 'test.loginuser' doesn't exist
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:239) ~[spring-jdbc-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72) ~[spring-jdbc-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:91) ~[mybatis-spring-2.0.6.jar:2.0.6]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:441) ~[mybatis-spring-2.0.6.jar:2.0.6]
+	at com.sun.proxy.$Proxy77.selectList(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224) ~[mybatis-spring-2.0.6.jar:2.0.6]
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147) ~[mybatis-3.5.6.jar:3.5.6]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80) ~[mybatis-3.5.6.jar:3.5.6]
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152) ~[mybatis-3.5.6.jar:3.5.6]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85) ~[mybatis-3.5.6.jar:3.5.6]
+	at com.sun.proxy.$Proxy78.selectUserList(Unknown Source) ~[na:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_291]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_291]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_291]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_291]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139) ~[spring-tx-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) ~[spring-aop-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at com.sun.proxy.$Proxy79.selectUserList(Unknown Source) ~[na:na]
+	at com.example.xiaoheihe.service.impl.UserServiceImpl.loadUserByUsername(UserServiceImpl.java:26) ~[classes/:na]
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:108) ~[spring-security-core-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	... 51 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Table 'test.loginuser' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354) ~[mysql-connector-j-8.0.32.jar:8.0.32]
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:497) ~[druid-1.2.6.jar:1.2.6]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_291]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_291]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_291]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_291]
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59) ~[mybatis-3.5.6.jar:3.5.6]
+	at com.sun.proxy.$Proxy105.execute(Unknown Source) ~[na:na]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64) ~[mybatis-3.5.6.jar:3.5.6]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79) ~[mybatis-3.5.6.jar:3.5.6]
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63) ~[mybatis-3.5.6.jar:3.5.6]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325) ~[mybatis-3.5.6.jar:3.5.6]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156) ~[mybatis-3.5.6.jar:3.5.6]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109) ~[mybatis-3.5.6.jar:3.5.6]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89) ~[mybatis-3.5.6.jar:3.5.6]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147) ~[mybatis-3.5.6.jar:3.5.6]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140) ~[mybatis-3.5.6.jar:3.5.6]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_291]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_291]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_291]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_291]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427) ~[mybatis-spring-2.0.6.jar:2.0.6]
+	... 71 common frames omitted
+
+2023-03-06 15:45:54.035  INFO 2444 --- [SpringContextShutdownHook] c.e.x.config.listener.DemoListener       : 销毁servlet
+2023-03-06 15:45:54.081  INFO 2444 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-03-06 15:45:54.081  INFO 2444 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-03-06 15:45:54.094  INFO 2444 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-03-06 15:45:54.097  INFO 2444 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-03-06 15:45:58.571  INFO 6820 --- [main] com.example.xiaoheihe.Application        : Starting Application on DESKTOP-V5V13C7 with PID 6820 (D:\soft\workSpace\demo1\xiaoheihe\target\classes started by Administrator in D:\soft\workSpace\demo1)
+2023-03-06 15:45:58.580 DEBUG 6820 --- [main] com.example.xiaoheihe.Application        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2023-03-06 15:45:58.581  INFO 6820 --- [main] com.example.xiaoheihe.Application        : The following profiles are active: dev
+2023-03-06 15:45:59.180  INFO 6820 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-03-06 15:45:59.182  INFO 6820 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-03-06 15:45:59.214  INFO 6820 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22ms. Found 0 Redis repository interfaces.
+2023-03-06 15:45:59.802  INFO 6820 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8786 (http)
+2023-03-06 15:45:59.809  INFO 6820 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-06 15:45:59.809  INFO 6820 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2023-03-06 15:45:59.889  INFO 6820 --- [main] o.a.c.c.C.[.[localhost].[/xiaoheihe]     : Initializing Spring embedded WebApplicationContext
+2023-03-06 15:45:59.889  INFO 6820 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1249 ms
+2023-03-06 15:45:59.960  INFO 6820 --- [main] c.e.x.config.listener.DemoListener       : 初始化servlet
+2023-03-06 15:46:00.685  INFO 6820 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-06 15:46:01.086  INFO 6820 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@25421809, org.springframework.security.web.context.SecurityContextPersistenceFilter@dc8b2ff, org.springframework.security.web.header.HeaderWriterFilter@18faaff6, org.springframework.security.web.authentication.logout.LogoutFilter@4f541e67, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@e91facf, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6480a063, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@714bffd5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5b1ff8cd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7df3da0b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6ac9b66b, org.springframework.security.web.session.SessionManagementFilter@137a4b54, org.springframework.security.web.access.ExceptionTranslationFilter@76ffc17c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1da5c19d]
+2023-03-06 15:46:01.138  INFO 6820 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8786 (http) with context path '/xiaoheihe'
+2023-03-06 15:46:01.145  INFO 6820 --- [main] com.example.xiaoheihe.Application        : Started Application in 2.944 seconds (JVM running for 3.573)
+2023-03-06 15:46:12.182  INFO 6820 --- [http-nio-8786-exec-1] o.a.c.c.C.[.[localhost].[/xiaoheihe]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-06 15:46:12.182  INFO 6820 --- [http-nio-8786-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-06 15:46:12.187  INFO 6820 --- [http-nio-8786-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2023-03-06 15:46:12.344  INFO 6820 --- [http-nio-8786-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-03-06 15:46:12.680 DEBUG 6820 --- [http-nio-8786-exec-1] c.e.x.dao.UserMapper.selectUserList      : ==>  Preparing: select id,username,password,`name`,login_failed_times from login_User where username = ? order by id limit 0,20
+2023-03-06 15:46:12.695 DEBUG 6820 --- [http-nio-8786-exec-1] c.e.x.dao.UserMapper.selectUserList      : ==> Parameters: admin(String)
+2023-03-06 15:46:12.712 DEBUG 6820 --- [http-nio-8786-exec-1] c.e.x.dao.UserMapper.selectUserList      : <==      Total: 1
+2023-03-06 15:46:12.714  WARN 6820 --- [http-nio-8786-exec-1] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
+2023-03-06 15:50:31.092  WARN 6820 --- [http-nio-8786-exec-2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://192.168.11.4:3306/test?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8, version : 1.2.5, lastPacketReceivedIdleMillis : 258377
+2023-03-06 15:50:31.108 DEBUG 6820 --- [http-nio-8786-exec-2] c.e.x.dao.UserMapper.selectUserList      : ==>  Preparing: select id,username,password,`name`,login_failed_times from login_User where username = ? order by id limit 0,20
+2023-03-06 15:50:31.111 DEBUG 6820 --- [http-nio-8786-exec-2] c.e.x.dao.UserMapper.selectUserList      : ==> Parameters: admin(String)
+2023-03-06 15:50:31.114 DEBUG 6820 --- [http-nio-8786-exec-2] c.e.x.dao.UserMapper.selectUserList      : <==      Total: 1
+2023-03-06 15:50:31.114  WARN 6820 --- [http-nio-8786-exec-2] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
+2023-03-06 15:50:44.560 DEBUG 6820 --- [http-nio-8786-exec-6] c.e.x.dao.UserMapper.selectUserList      : ==>  Preparing: select id,username,password,`name`,login_failed_times from login_User where username = ? order by id limit 0,20
+2023-03-06 15:50:44.561 DEBUG 6820 --- [http-nio-8786-exec-6] c.e.x.dao.UserMapper.selectUserList      : ==> Parameters: admin(String)
+2023-03-06 15:50:44.563 DEBUG 6820 --- [http-nio-8786-exec-6] c.e.x.dao.UserMapper.selectUserList      : <==      Total: 1
+2023-03-06 15:50:44.564  WARN 6820 --- [http-nio-8786-exec-6] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
+2023-03-06 15:55:54.325  INFO 6820 --- [SpringContextShutdownHook] c.e.x.config.listener.DemoListener       : 销毁servlet
+2023-03-06 15:55:54.372  INFO 6820 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-03-06 15:55:54.372  INFO 6820 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-03-06 15:55:54.385  INFO 6820 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-03-06 15:55:54.390  INFO 6820 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-03-06 15:55:58.383  INFO 6220 --- [main] com.example.xiaoheihe.Application        : Starting Application on DESKTOP-V5V13C7 with PID 6220 (D:\soft\workSpace\demo1\xiaoheihe\target\classes started by Administrator in D:\soft\workSpace\demo1)
+2023-03-06 15:55:58.386 DEBUG 6220 --- [main] com.example.xiaoheihe.Application        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2023-03-06 15:55:58.386  INFO 6220 --- [main] com.example.xiaoheihe.Application        : The following profiles are active: dev
+2023-03-06 15:55:59.021  INFO 6220 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-03-06 15:55:59.022  INFO 6220 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-03-06 15:55:59.051  INFO 6220 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17ms. Found 0 Redis repository interfaces.
+2023-03-06 15:55:59.631  INFO 6220 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8786 (http)
+2023-03-06 15:55:59.638  INFO 6220 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-06 15:55:59.638  INFO 6220 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2023-03-06 15:55:59.723  INFO 6220 --- [main] o.a.c.c.C.[.[localhost].[/xiaoheihe]     : Initializing Spring embedded WebApplicationContext
+2023-03-06 15:55:59.723  INFO 6220 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1279 ms
+2023-03-06 15:55:59.781  INFO 6220 --- [main] c.e.x.config.listener.DemoListener       : 初始化servlet
+2023-03-06 15:56:00.541  INFO 6220 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-06 15:56:16.181  INFO 6220 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3722f39d, org.springframework.security.web.context.SecurityContextPersistenceFilter@39acd1f1, org.springframework.security.web.header.HeaderWriterFilter@391d28ea, org.springframework.security.web.authentication.logout.LogoutFilter@33430fc, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1dbeedff, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6654ca0d, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4ec8d9b2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@51743cc0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@24fef542, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@57b63253, org.springframework.security.web.session.SessionManagementFilter@4a4ff5ed, org.springframework.security.web.access.ExceptionTranslationFilter@6533629, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@28519bfb]
+2023-03-06 15:56:16.246  INFO 6220 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8786 (http) with context path '/xiaoheihe'
+2023-03-06 15:56:16.254  INFO 6220 --- [main] com.example.xiaoheihe.Application        : Started Application in 18.262 seconds (JVM running for 18.872)
+2023-03-06 15:56:28.556  INFO 6220 --- [http-nio-8786-exec-1] o.a.c.c.C.[.[localhost].[/xiaoheihe]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-06 15:56:28.556  INFO 6220 --- [http-nio-8786-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-06 15:56:28.564  INFO 6220 --- [http-nio-8786-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2023-03-06 15:56:28.723  INFO 6220 --- [http-nio-8786-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-03-06 15:56:29.054 DEBUG 6220 --- [http-nio-8786-exec-1] c.e.x.dao.UserMapper.selectUserList      : ==>  Preparing: select id,username,password,`name`,login_failed_times from login_User where username = ? order by id limit 0,20
+2023-03-06 15:56:29.069 DEBUG 6220 --- [http-nio-8786-exec-1] c.e.x.dao.UserMapper.selectUserList      : ==> Parameters: admin(String)
+2023-03-06 15:56:29.086 DEBUG 6220 --- [http-nio-8786-exec-1] c.e.x.dao.UserMapper.selectUserList      : <==      Total: 1
+2023-03-06 15:56:29.088  WARN 6220 --- [http-nio-8786-exec-1] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
+2023-03-06 15:56:44.659  INFO 6220 --- [SpringContextShutdownHook] c.e.x.config.listener.DemoListener       : 销毁servlet
+2023-03-06 15:56:44.708  INFO 6220 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-03-06 15:56:44.708  INFO 6220 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-03-06 15:56:44.725  INFO 6220 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-03-06 15:56:44.729  INFO 6220 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-03-06 15:56:48.650  INFO 6040 --- [main] com.example.xiaoheihe.Application        : Starting Application on DESKTOP-V5V13C7 with PID 6040 (D:\soft\workSpace\demo1\xiaoheihe\target\classes started by Administrator in D:\soft\workSpace\demo1)
+2023-03-06 15:56:48.652 DEBUG 6040 --- [main] com.example.xiaoheihe.Application        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2023-03-06 15:56:48.652  INFO 6040 --- [main] com.example.xiaoheihe.Application        : The following profiles are active: dev
+2023-03-06 15:56:49.179  INFO 6040 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-03-06 15:56:49.180  INFO 6040 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-03-06 15:56:49.205  INFO 6040 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15ms. Found 0 Redis repository interfaces.
+2023-03-06 15:56:49.733  INFO 6040 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8786 (http)
+2023-03-06 15:56:49.740  INFO 6040 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-06 15:56:49.740  INFO 6040 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2023-03-06 15:56:49.830  INFO 6040 --- [main] o.a.c.c.C.[.[localhost].[/xiaoheihe]     : Initializing Spring embedded WebApplicationContext
+2023-03-06 15:56:49.830  INFO 6040 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1133 ms
+2023-03-06 15:56:49.902  INFO 6040 --- [main] c.e.x.config.listener.DemoListener       : 初始化servlet
+2023-03-06 15:56:50.708  INFO 6040 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-06 15:56:51.135  INFO 6040 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@22899683, org.springframework.security.web.context.SecurityContextPersistenceFilter@fe08eaf, org.springframework.security.web.header.HeaderWriterFilter@2e93108a, org.springframework.security.web.authentication.logout.LogoutFilter@f1d1463, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@661db63e, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@23df7fad, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@40017e98, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7b1c501d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5ae66c98, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4fbe486c, org.springframework.security.web.session.SessionManagementFilter@65f5cae3, org.springframework.security.web.access.ExceptionTranslationFilter@716ae973, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2b4829aa]
+2023-03-06 15:56:51.187  INFO 6040 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8786 (http) with context path '/xiaoheihe'
+2023-03-06 15:56:51.193  INFO 6040 --- [main] com.example.xiaoheihe.Application        : Started Application in 2.893 seconds (JVM running for 3.543)
+2023-03-06 15:56:59.701  INFO 6040 --- [http-nio-8786-exec-1] o.a.c.c.C.[.[localhost].[/xiaoheihe]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-06 15:56:59.701  INFO 6040 --- [http-nio-8786-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-06 15:56:59.707  INFO 6040 --- [http-nio-8786-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2023-03-06 15:56:59.897  INFO 6040 --- [http-nio-8786-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-03-06 15:57:00.320 DEBUG 6040 --- [http-nio-8786-exec-1] c.e.x.dao.UserMapper.selectUserList      : ==>  Preparing: select id,username,password,`name`,login_failed_times from login_User where username = ? order by id limit 0,20
+2023-03-06 15:57:00.337 DEBUG 6040 --- [http-nio-8786-exec-1] c.e.x.dao.UserMapper.selectUserList      : ==> Parameters: admin(String)
+2023-03-06 15:57:00.353 DEBUG 6040 --- [http-nio-8786-exec-1] c.e.x.dao.UserMapper.selectUserList      : <==      Total: 1
+2023-03-06 15:57:00.359 ERROR 6040 --- [http-nio-8786-exec-1] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/xiaoheihe] threw exception
+
+java.lang.IllegalArgumentException: There is no PasswordEncoder mapped for the id "null"
+	at org.springframework.security.crypto.password.DelegatingPasswordEncoder$UnmappedIdPasswordEncoder.matches(DelegatingPasswordEncoder.java:250) ~[spring-security-core-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.crypto.password.DelegatingPasswordEncoder.matches(DelegatingPasswordEncoder.java:198) ~[spring-security-core-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$LazyPasswordEncoder.matches(WebSecurityConfigurerAdapter.java:615) ~[spring-security-config-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.additionalAuthenticationChecks(DaoAuthenticationProvider.java:90) ~[spring-security-core-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:166) ~[spring-security-core-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:199) ~[spring-security-core-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:219) ~[spring-security-core-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:95) ~[spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212) ~[spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92) ~[spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77) ~[spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_291]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_291]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_291]
+
+2023-03-06 16:00:12.970  WARN 6040 --- [http-nio-8786-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://192.168.11.4:3306/test?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8, version : 1.2.5, lastPacketReceivedIdleMillis : 192568
+2023-03-06 16:00:13.003 DEBUG 6040 --- [http-nio-8786-exec-6] c.e.x.dao.UserMapper.selectUserList      : ==>  Preparing: select id,username,password,`name`,login_failed_times from login_User where username = ? order by id limit 0,20
+2023-03-06 16:00:13.006 DEBUG 6040 --- [http-nio-8786-exec-6] c.e.x.dao.UserMapper.selectUserList      : ==> Parameters: admin(String)
+2023-03-06 16:00:13.011 DEBUG 6040 --- [http-nio-8786-exec-6] c.e.x.dao.UserMapper.selectUserList      : <==      Total: 1
+2023-03-06 16:01:26.901 ERROR 6040 --- [http-nio-8786-exec-6] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/xiaoheihe] threw exception
+
+java.lang.IllegalArgumentException: There is no PasswordEncoder mapped for the id "null"
+	at org.springframework.security.crypto.password.DelegatingPasswordEncoder$UnmappedIdPasswordEncoder.matches(DelegatingPasswordEncoder.java:250) ~[spring-security-core-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.crypto.password.DelegatingPasswordEncoder.matches(DelegatingPasswordEncoder.java:198) ~[spring-security-core-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$LazyPasswordEncoder.matches(WebSecurityConfigurerAdapter.java:615) ~[spring-security-config-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.additionalAuthenticationChecks(DaoAuthenticationProvider.java:90) ~[spring-security-core-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:166) ~[spring-security-core-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:199) ~[spring-security-core-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:219) ~[spring-security-core-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:95) ~[spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212) ~[spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92) ~[spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77) ~[spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.3.5.RELEASE.jar:5.3.5.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_291]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_291]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.39.jar:9.0.39]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_291]
+
+2023-03-06 16:01:38.673  INFO 6040 --- [SpringContextShutdownHook] c.e.x.config.listener.DemoListener       : 销毁servlet
+2023-03-06 16:01:38.715  INFO 6040 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-03-06 16:01:38.715  INFO 6040 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-03-06 16:01:38.729  INFO 6040 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-03-06 16:01:38.738  INFO 6040 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-03-06 16:01:42.574  INFO 18032 --- [main] com.example.xiaoheihe.Application        : Starting Application on DESKTOP-V5V13C7 with PID 18032 (D:\soft\workSpace\demo1\xiaoheihe\target\classes started by Administrator in D:\soft\workSpace\demo1)
+2023-03-06 16:01:42.576 DEBUG 18032 --- [main] com.example.xiaoheihe.Application        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2023-03-06 16:01:42.576  INFO 18032 --- [main] com.example.xiaoheihe.Application        : The following profiles are active: dev
+2023-03-06 16:01:43.114  INFO 18032 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-03-06 16:01:43.115  INFO 18032 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-03-06 16:01:43.141  INFO 18032 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15ms. Found 0 Redis repository interfaces.
+2023-03-06 16:01:43.695  INFO 18032 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8786 (http)
+2023-03-06 16:01:43.702  INFO 18032 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-06 16:01:43.702  INFO 18032 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2023-03-06 16:01:43.798  INFO 18032 --- [main] o.a.c.c.C.[.[localhost].[/xiaoheihe]     : Initializing Spring embedded WebApplicationContext
+2023-03-06 16:01:43.798  INFO 18032 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1174 ms
+2023-03-06 16:01:43.861  INFO 18032 --- [main] c.e.x.config.listener.DemoListener       : 初始化servlet
+2023-03-06 16:01:44.622  INFO 18032 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-06 16:01:45.023  INFO 18032 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6bf0f70a, org.springframework.security.web.context.SecurityContextPersistenceFilter@40538370, org.springframework.security.web.header.HeaderWriterFilter@35ab4260, org.springframework.security.web.authentication.logout.LogoutFilter@62de73eb, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4f20b022, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2c2aab92, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5310e451, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@760a2b6e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5b1ff8cd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@52d63b7e, org.springframework.security.web.session.SessionManagementFilter@76ffc17c, org.springframework.security.web.access.ExceptionTranslationFilter@627acb38, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@e0847a9]
+2023-03-06 16:01:45.078  INFO 18032 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8786 (http) with context path '/xiaoheihe'
+2023-03-06 16:01:45.085  INFO 18032 --- [main] com.example.xiaoheihe.Application        : Started Application in 2.901 seconds (JVM running for 3.584)
+2023-03-06 16:04:24.792  INFO 18032 --- [http-nio-8786-exec-1] o.a.c.c.C.[.[localhost].[/xiaoheihe]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-06 16:04:24.792  INFO 18032 --- [http-nio-8786-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-06 16:04:24.799  INFO 18032 --- [http-nio-8786-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2023-03-06 16:04:24.956  INFO 18032 --- [http-nio-8786-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-03-06 16:04:25.319 DEBUG 18032 --- [http-nio-8786-exec-1] c.e.x.dao.UserMapper.selectUserList      : ==>  Preparing: select id,username,password,`name`,login_failed_times from login_User where username = ? order by id limit 0,20
+2023-03-06 16:04:25.344 DEBUG 18032 --- [http-nio-8786-exec-1] c.e.x.dao.UserMapper.selectUserList      : ==> Parameters: admin(String)
+2023-03-06 16:04:25.361 DEBUG 18032 --- [http-nio-8786-exec-1] c.e.x.dao.UserMapper.selectUserList      : <==      Total: 1
+2023-03-06 16:04:25.363  WARN 18032 --- [http-nio-8786-exec-1] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
+2023-03-06 16:04:43.134 DEBUG 18032 --- [http-nio-8786-exec-2] c.e.x.dao.UserMapper.selectUserList      : ==>  Preparing: select id,username,password,`name`,login_failed_times from login_User where username = ? order by id limit 0,20
+2023-03-06 16:04:43.137 DEBUG 18032 --- [http-nio-8786-exec-2] c.e.x.dao.UserMapper.selectUserList      : ==> Parameters: admin(String)
+2023-03-06 16:04:43.142 DEBUG 18032 --- [http-nio-8786-exec-2] c.e.x.dao.UserMapper.selectUserList      : <==      Total: 1
+2023-03-06 16:04:58.474  WARN 18032 --- [http-nio-8786-exec-2] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
+2023-03-06 16:07:12.234  WARN 18032 --- [http-nio-8786-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://192.168.11.4:3306/test?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8, version : 1.2.5, lastPacketReceivedIdleMillis : 149086
+2023-03-06 16:07:12.252 DEBUG 18032 --- [http-nio-8786-exec-6] c.e.x.dao.UserMapper.selectUserList      : ==>  Preparing: select id,username,password,`name`,login_failed_times from login_User where username = ? order by id limit 0,20
+2023-03-06 16:07:12.253 DEBUG 18032 --- [http-nio-8786-exec-6] c.e.x.dao.UserMapper.selectUserList      : ==> Parameters: admin(String)
+2023-03-06 16:07:12.255 DEBUG 18032 --- [http-nio-8786-exec-6] c.e.x.dao.UserMapper.selectUserList      : <==      Total: 1
+2023-03-06 16:10:22.154  INFO 18032 --- [SpringContextShutdownHook] c.e.x.config.listener.DemoListener       : 销毁servlet
+2023-03-06 16:10:22.200  INFO 18032 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-03-06 16:10:22.200  INFO 18032 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-03-06 16:10:22.212  INFO 18032 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-03-06 16:10:22.215  INFO 18032 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-03-06 16:10:25.398  INFO 23860 --- [main] com.example.xiaoheihe.Application        : Starting Application on DESKTOP-V5V13C7 with PID 23860 (D:\soft\workSpace\demo1\xiaoheihe\target\classes started by Administrator in D:\soft\workSpace\demo1)
+2023-03-06 16:10:25.401 DEBUG 23860 --- [main] com.example.xiaoheihe.Application        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2023-03-06 16:10:25.401  INFO 23860 --- [main] com.example.xiaoheihe.Application        : The following profiles are active: dev
+2023-03-06 16:10:26.003  INFO 23860 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-03-06 16:10:26.005  INFO 23860 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-03-06 16:10:26.030  INFO 23860 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 Redis repository interfaces.
+2023-03-06 16:10:26.605  INFO 23860 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8786 (http)
+2023-03-06 16:10:26.623  INFO 23860 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-06 16:10:26.623  INFO 23860 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2023-03-06 16:10:26.712  INFO 23860 --- [main] o.a.c.c.C.[.[localhost].[/xiaoheihe]     : Initializing Spring embedded WebApplicationContext
+2023-03-06 16:10:26.712  INFO 23860 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1240 ms
+2023-03-06 16:10:26.773  INFO 23860 --- [main] c.e.x.config.listener.DemoListener       : 初始化servlet
+2023-03-06 16:10:27.513  INFO 23860 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-06 16:10:27.906  INFO 23860 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7ee64b53, org.springframework.security.web.context.SecurityContextPersistenceFilter@6dcbbb49, org.springframework.security.web.header.HeaderWriterFilter@43b6cb1c, org.springframework.security.web.authentication.logout.LogoutFilter@7856f41a, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4b09d1c3, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@15cee630, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@1131aead, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@273293c8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3451fc88, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7d126083, org.springframework.security.web.session.SessionManagementFilter@7b3feb26, org.springframework.security.web.access.ExceptionTranslationFilter@2dbf2da, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@25d0b918]
+2023-03-06 16:10:27.978  INFO 23860 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8786 (http) with context path '/xiaoheihe'
+2023-03-06 16:10:27.986  INFO 23860 --- [main] com.example.xiaoheihe.Application        : Started Application in 2.952 seconds (JVM running for 3.654)
+2023-03-06 16:12:20.191  INFO 23860 --- [SpringContextShutdownHook] c.e.x.config.listener.DemoListener       : 销毁servlet
+2023-03-06 16:12:20.236  INFO 23860 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-03-06 16:12:20.237  INFO 23860 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-03-06 16:12:20.249  INFO 23860 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-03-06 16:12:24.082  INFO 6852 --- [main] com.example.xiaoheihe.Application        : Starting Application on DESKTOP-V5V13C7 with PID 6852 (D:\soft\workSpace\demo1\xiaoheihe\target\classes started by Administrator in D:\soft\workSpace\demo1)
+2023-03-06 16:12:24.084 DEBUG 6852 --- [main] com.example.xiaoheihe.Application        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2023-03-06 16:12:24.084  INFO 6852 --- [main] com.example.xiaoheihe.Application        : The following profiles are active: dev
+2023-03-06 16:12:24.623  INFO 6852 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-03-06 16:12:24.625  INFO 6852 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-03-06 16:12:24.653  INFO 6852 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17ms. Found 0 Redis repository interfaces.
+2023-03-06 16:12:25.206  INFO 6852 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8786 (http)
+2023-03-06 16:12:25.213  INFO 6852 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-06 16:12:25.213  INFO 6852 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2023-03-06 16:12:25.303  INFO 6852 --- [main] o.a.c.c.C.[.[localhost].[/xiaoheihe]     : Initializing Spring embedded WebApplicationContext
+2023-03-06 16:12:25.304  INFO 6852 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1168 ms
+2023-03-06 16:12:25.362  INFO 6852 --- [main] c.e.x.config.listener.DemoListener       : 初始化servlet
+2023-03-06 16:12:26.118  INFO 6852 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-06 16:12:26.519  INFO 6852 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@40738846, org.springframework.security.web.context.SecurityContextPersistenceFilter@6cd7f381, org.springframework.security.web.header.HeaderWriterFilter@6814262d, org.springframework.security.web.authentication.logout.LogoutFilter@2e7a9db7, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@714bffd5, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@8549c5f, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@1255de25, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@70777a65, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2e426dd2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1686ed85, org.springframework.security.web.session.SessionManagementFilter@7d7d8911, org.springframework.security.web.access.ExceptionTranslationFilter@6be50b35, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5e8f0f98]
+2023-03-06 16:12:26.586  INFO 6852 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8786 (http) with context path '/xiaoheihe'
+2023-03-06 16:12:26.592  INFO 6852 --- [main] com.example.xiaoheihe.Application        : Started Application in 2.897 seconds (JVM running for 3.557)
+2023-03-06 16:13:15.674  INFO 6852 --- [http-nio-8786-exec-1] o.a.c.c.C.[.[localhost].[/xiaoheihe]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-06 16:13:15.674  INFO 6852 --- [http-nio-8786-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-06 16:13:15.679  INFO 6852 --- [http-nio-8786-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2023-03-06 16:13:19.167  INFO 6852 --- [http-nio-8786-exec-5] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-03-06 16:13:19.492 DEBUG 6852 --- [http-nio-8786-exec-5] c.e.x.dao.UserMapper.selectUserList      : ==>  Preparing: select id,username,password,`name`,login_failed_times from login_User where username = ? order by id limit 0,20
+2023-03-06 16:13:19.508 DEBUG 6852 --- [http-nio-8786-exec-5] c.e.x.dao.UserMapper.selectUserList      : ==> Parameters: admin(String)
+2023-03-06 16:13:19.524 DEBUG 6852 --- [http-nio-8786-exec-5] c.e.x.dao.UserMapper.selectUserList      : <==      Total: 1
+2023-03-06 16:13:19.605  WARN 6852 --- [http-nio-8786-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2023-03-06 16:13:41.471  INFO 6852 --- [SpringContextShutdownHook] c.e.x.config.listener.DemoListener       : 销毁servlet
+2023-03-06 16:13:41.519  INFO 6852 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-03-06 16:13:41.519  INFO 6852 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-03-06 16:13:41.530  INFO 6852 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-03-06 16:13:41.534  INFO 6852 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-03-06 16:13:45.508  INFO 19112 --- [main] com.example.xiaoheihe.Application        : Starting Application on DESKTOP-V5V13C7 with PID 19112 (D:\soft\workSpace\demo1\xiaoheihe\target\classes started by Administrator in D:\soft\workSpace\demo1)
+2023-03-06 16:13:45.510 DEBUG 19112 --- [main] com.example.xiaoheihe.Application        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2023-03-06 16:13:45.510  INFO 19112 --- [main] com.example.xiaoheihe.Application        : The following profiles are active: dev
+2023-03-06 16:13:46.063  INFO 19112 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-03-06 16:13:46.065  INFO 19112 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-03-06 16:13:46.094  INFO 19112 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20ms. Found 0 Redis repository interfaces.
+2023-03-06 16:13:46.649  INFO 19112 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8786 (http)
+2023-03-06 16:13:46.656  INFO 19112 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-06 16:13:46.656  INFO 19112 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2023-03-06 16:13:46.742  INFO 19112 --- [main] o.a.c.c.C.[.[localhost].[/xiaoheihe]     : Initializing Spring embedded WebApplicationContext
+2023-03-06 16:13:46.743  INFO 19112 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1185 ms
+2023-03-06 16:13:46.801  INFO 19112 --- [main] c.e.x.config.listener.DemoListener       : 初始化servlet
+2023-03-06 16:13:47.568  INFO 19112 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-06 16:13:47.937  INFO 19112 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@27dfd12b, org.springframework.security.web.context.SecurityContextPersistenceFilter@5dd747c1, org.springframework.security.web.header.HeaderWriterFilter@6591f8ea, org.springframework.security.web.authentication.logout.LogoutFilter@3568ea59, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@29c25bbc, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@5d800a56, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4348fa35, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@37806be6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5af38a4a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@563843f1, org.springframework.security.web.session.SessionManagementFilter@56478522, org.springframework.security.web.access.ExceptionTranslationFilter@bc8d68b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4387d2f4]
+2023-03-06 16:13:47.990  INFO 19112 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8786 (http) with context path '/xiaoheihe'
+2023-03-06 16:13:47.997  INFO 19112 --- [main] com.example.xiaoheihe.Application        : Started Application in 2.868 seconds (JVM running for 3.611)
+2023-03-06 16:14:01.826  INFO 19112 --- [http-nio-8786-exec-2] o.a.c.c.C.[.[localhost].[/xiaoheihe]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-06 16:14:01.826  INFO 19112 --- [http-nio-8786-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-06 16:14:01.832  INFO 19112 --- [http-nio-8786-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2023-03-06 16:14:04.878  INFO 19112 --- [http-nio-8786-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-03-06 16:14:05.212 DEBUG 19112 --- [http-nio-8786-exec-1] c.e.x.dao.UserMapper.selectUserList      : ==>  Preparing: select id,username,password,`name`,login_failed_times from login_User where username = ? order by id limit 0,20
+2023-03-06 16:14:05.244 DEBUG 19112 --- [http-nio-8786-exec-1] c.e.x.dao.UserMapper.selectUserList      : ==> Parameters: admin(String)
+2023-03-06 16:14:05.259 DEBUG 19112 --- [http-nio-8786-exec-1] c.e.x.dao.UserMapper.selectUserList      : <==      Total: 1
+2023-03-06 16:14:05.344  WARN 19112 --- [http-nio-8786-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2023-03-06 16:17:30.929  INFO 19112 --- [SpringContextShutdownHook] c.e.x.config.listener.DemoListener       : 销毁servlet
+2023-03-06 16:17:30.974  INFO 19112 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-03-06 16:17:30.975  INFO 19112 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-03-06 16:17:30.987  INFO 19112 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-03-06 16:17:30.991  INFO 19112 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-03-06 16:17:35.221  INFO 2236 --- [main] com.example.xiaoheihe.Application        : Starting Application on DESKTOP-V5V13C7 with PID 2236 (D:\soft\workSpace\demo1\xiaoheihe\target\classes started by Administrator in D:\soft\workSpace\demo1)
+2023-03-06 16:17:35.227 DEBUG 2236 --- [main] com.example.xiaoheihe.Application        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2023-03-06 16:17:35.227  INFO 2236 --- [main] com.example.xiaoheihe.Application        : The following profiles are active: dev
+2023-03-06 16:17:35.852  INFO 2236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-03-06 16:17:35.853  INFO 2236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-03-06 16:17:35.883  INFO 2236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18ms. Found 0 Redis repository interfaces.
+2023-03-06 16:17:36.469  INFO 2236 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8786 (http)
+2023-03-06 16:17:36.476  INFO 2236 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-06 16:17:36.476  INFO 2236 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2023-03-06 16:17:36.571  INFO 2236 --- [main] o.a.c.c.C.[.[localhost].[/xiaoheihe]     : Initializing Spring embedded WebApplicationContext
+2023-03-06 16:17:36.571  INFO 2236 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1281 ms
+2023-03-06 16:17:36.646  INFO 2236 --- [main] c.e.x.config.listener.DemoListener       : 初始化servlet
+2023-03-06 16:17:37.512  INFO 2236 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-06 16:17:37.921  INFO 2236 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6c66ddab, org.springframework.security.web.context.SecurityContextPersistenceFilter@51e94b7d, org.springframework.security.web.header.HeaderWriterFilter@14201a90, org.springframework.security.web.authentication.logout.LogoutFilter@121cf6f4, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@33430fc, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@4e7eba9f, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@603f4e3e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5fc1e4fb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@29f95272, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@45fb2354, org.springframework.security.web.session.SessionManagementFilter@857f74a, org.springframework.security.web.access.ExceptionTranslationFilter@137a4b54, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4b360972]
+2023-03-06 16:17:37.985  INFO 2236 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8786 (http) with context path '/xiaoheihe'
+2023-03-06 16:17:37.993  INFO 2236 --- [main] com.example.xiaoheihe.Application        : Started Application in 3.22 seconds (JVM running for 3.99)
+2023-03-06 16:17:57.974  INFO 2236 --- [http-nio-8786-exec-1] o.a.c.c.C.[.[localhost].[/xiaoheihe]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-06 16:17:57.974  INFO 2236 --- [http-nio-8786-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-06 16:17:57.980  INFO 2236 --- [http-nio-8786-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2023-03-06 16:18:01.938  INFO 2236 --- [http-nio-8786-exec-7] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-03-06 16:18:02.290 DEBUG 2236 --- [http-nio-8786-exec-7] c.e.x.dao.UserMapper.selectUserList      : ==>  Preparing: select id,username,password,`name`,login_failed_times from login_User where username = ? order by id limit 0,20
+2023-03-06 16:18:02.306 DEBUG 2236 --- [http-nio-8786-exec-7] c.e.x.dao.UserMapper.selectUserList      : ==> Parameters: admin(String)
+2023-03-06 16:18:02.323 DEBUG 2236 --- [http-nio-8786-exec-7] c.e.x.dao.UserMapper.selectUserList      : <==      Total: 1
+2023-03-06 16:18:02.401  WARN 2236 --- [http-nio-8786-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2023-03-06 16:18:23.902  INFO 2236 --- [SpringContextShutdownHook] c.e.x.config.listener.DemoListener       : 销毁servlet
+2023-03-06 16:18:23.947  INFO 2236 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-03-06 16:18:23.948  INFO 2236 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-03-06 16:18:23.962  INFO 2236 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-03-06 16:18:23.965  INFO 2236 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-03-06 16:18:27.852  INFO 20940 --- [main] com.example.xiaoheihe.Application        : Starting Application on DESKTOP-V5V13C7 with PID 20940 (D:\soft\workSpace\demo1\xiaoheihe\target\classes started by Administrator in D:\soft\workSpace\demo1)
+2023-03-06 16:18:27.856 DEBUG 20940 --- [main] com.example.xiaoheihe.Application        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2023-03-06 16:18:27.856  INFO 20940 --- [main] com.example.xiaoheihe.Application        : The following profiles are active: dev
+2023-03-06 16:18:28.425  INFO 20940 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-03-06 16:18:28.426  INFO 20940 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-03-06 16:18:28.451  INFO 20940 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 Redis repository interfaces.
+2023-03-06 16:18:29.025  INFO 20940 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8786 (http)
+2023-03-06 16:18:29.034  INFO 20940 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-06 16:18:29.034  INFO 20940 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2023-03-06 16:18:29.119  INFO 20940 --- [main] o.a.c.c.C.[.[localhost].[/xiaoheihe]     : Initializing Spring embedded WebApplicationContext
+2023-03-06 16:18:29.119  INFO 20940 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1211 ms
+2023-03-06 16:18:29.175  INFO 20940 --- [main] c.e.x.config.listener.DemoListener       : 初始化servlet
+2023-03-06 16:18:29.980  INFO 20940 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-06 16:18:30.348  INFO 20940 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2b99c937, org.springframework.security.web.context.SecurityContextPersistenceFilter@279c4e3b, org.springframework.security.web.header.HeaderWriterFilter@60ae7cf2, org.springframework.security.web.authentication.logout.LogoutFilter@abc7005, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@93ce24d, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@3b9c9b8b, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@26c59348, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@56478522, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@fd87c22, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1de12397, org.springframework.security.web.session.SessionManagementFilter@238ad211, org.springframework.security.web.access.ExceptionTranslationFilter@448086ab, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@11c3d22f]
+2023-03-06 16:18:30.412  INFO 20940 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8786 (http) with context path '/xiaoheihe'
+2023-03-06 16:18:30.420  INFO 20940 --- [main] com.example.xiaoheihe.Application        : Started Application in 2.981 seconds (JVM running for 3.655)
+2023-03-06 16:18:59.395  INFO 20940 --- [SpringContextShutdownHook] c.e.x.config.listener.DemoListener       : 销毁servlet
+2023-03-06 16:18:59.439  INFO 20940 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-03-06 16:18:59.439  INFO 20940 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-03-06 16:18:59.457  INFO 20940 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-03-06 16:19:03.343  INFO 21400 --- [main] com.example.xiaoheihe.Application        : Starting Application on DESKTOP-V5V13C7 with PID 21400 (D:\soft\workSpace\demo1\xiaoheihe\target\classes started by Administrator in D:\soft\workSpace\demo1)
+2023-03-06 16:19:03.346 DEBUG 21400 --- [main] com.example.xiaoheihe.Application        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2023-03-06 16:19:03.346  INFO 21400 --- [main] com.example.xiaoheihe.Application        : The following profiles are active: dev
+2023-03-06 16:19:03.918  INFO 21400 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-03-06 16:19:03.920  INFO 21400 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-03-06 16:19:03.948  INFO 21400 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18ms. Found 0 Redis repository interfaces.
+2023-03-06 16:19:04.514  INFO 21400 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8786 (http)
+2023-03-06 16:19:04.522  INFO 21400 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-06 16:19:04.522  INFO 21400 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2023-03-06 16:19:04.606  INFO 21400 --- [main] o.a.c.c.C.[.[localhost].[/xiaoheihe]     : Initializing Spring embedded WebApplicationContext
+2023-03-06 16:19:04.606  INFO 21400 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1208 ms
+2023-03-06 16:19:04.665  INFO 21400 --- [main] c.e.x.config.listener.DemoListener       : 初始化servlet
+2023-03-06 16:19:05.422  INFO 21400 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-06 16:19:05.822  INFO 21400 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4ca970d5, org.springframework.security.web.context.SecurityContextPersistenceFilter@3041beb3, org.springframework.security.web.header.HeaderWriterFilter@333e5fb6, org.springframework.security.web.authentication.logout.LogoutFilter@7c956dda, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@40538370, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@14dbfdb1, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@dc8b2ff, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@19647566, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@71b3ba5a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6a2badb1, org.springframework.security.web.session.SessionManagementFilter@64c95480, org.springframework.security.web.access.ExceptionTranslationFilter@36c783ca, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7d977a20]
+2023-03-06 16:19:05.886  INFO 21400 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8786 (http) with context path '/xiaoheihe'
+2023-03-06 16:19:05.893  INFO 21400 --- [main] com.example.xiaoheihe.Application        : Started Application in 2.984 seconds (JVM running for 3.645)
+2023-03-06 16:19:34.877  INFO 21400 --- [SpringContextShutdownHook] c.e.x.config.listener.DemoListener       : 销毁servlet
+2023-03-06 16:19:34.934  INFO 21400 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-03-06 16:19:34.935  INFO 21400 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-03-06 16:19:34.947  INFO 21400 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-03-06 16:19:38.677  INFO 19692 --- [main] com.example.xiaoheihe.Application        : Starting Application on DESKTOP-V5V13C7 with PID 19692 (D:\soft\workSpace\demo1\xiaoheihe\target\classes started by Administrator in D:\soft\workSpace\demo1)
+2023-03-06 16:19:38.679 DEBUG 19692 --- [main] com.example.xiaoheihe.Application        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2023-03-06 16:19:38.679  INFO 19692 --- [main] com.example.xiaoheihe.Application        : The following profiles are active: dev
+2023-03-06 16:19:39.239  INFO 19692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-03-06 16:19:39.241  INFO 19692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-03-06 16:19:39.270  INFO 19692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17ms. Found 0 Redis repository interfaces.
+2023-03-06 16:19:39.811  INFO 19692 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8786 (http)
+2023-03-06 16:19:39.819  INFO 19692 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-06 16:19:39.820  INFO 19692 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2023-03-06 16:19:39.904  INFO 19692 --- [main] o.a.c.c.C.[.[localhost].[/xiaoheihe]     : Initializing Spring embedded WebApplicationContext
+2023-03-06 16:19:39.904  INFO 19692 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1176 ms
+2023-03-06 16:19:39.962  INFO 19692 --- [main] c.e.x.config.listener.DemoListener       : 初始化servlet
+2023-03-06 16:19:40.738  INFO 19692 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-06 16:19:41.152  INFO 19692 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1ad1be5d, org.springframework.security.web.context.SecurityContextPersistenceFilter@38dbeb39, org.springframework.security.web.header.HeaderWriterFilter@7f2ca6f8, org.springframework.security.web.authentication.logout.LogoutFilter@965bcbc, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@64420e34, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@5529522f, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@47797401, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@402a69f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@336e3be2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@702f4124, org.springframework.security.web.session.SessionManagementFilter@2ffb0d10, org.springframework.security.web.access.ExceptionTranslationFilter@580ffea, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6d3ad37a]
+2023-03-06 16:19:41.226  INFO 19692 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8786 (http) with context path '/xiaoheihe'
+2023-03-06 16:19:41.233  INFO 19692 --- [main] com.example.xiaoheihe.Application        : Started Application in 2.94 seconds (JVM running for 3.576)
+2023-03-06 16:19:47.547  INFO 19692 --- [http-nio-8786-exec-1] o.a.c.c.C.[.[localhost].[/xiaoheihe]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-06 16:19:47.547  INFO 19692 --- [http-nio-8786-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-06 16:19:47.553  INFO 19692 --- [http-nio-8786-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2023-03-06 16:19:51.328  INFO 19692 --- [http-nio-8786-exec-3] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-03-06 16:19:51.786 DEBUG 19692 --- [http-nio-8786-exec-3] c.e.x.dao.UserMapper.selectUserList      : ==>  Preparing: select id,username,password,`name`,login_failed_times from login_User where username = ? order by id limit 0,20
+2023-03-06 16:19:51.802 DEBUG 19692 --- [http-nio-8786-exec-3] c.e.x.dao.UserMapper.selectUserList      : ==> Parameters: admin(String)
+2023-03-06 16:19:51.818 DEBUG 19692 --- [http-nio-8786-exec-3] c.e.x.dao.UserMapper.selectUserList      : <==      Total: 1
+2023-03-06 16:19:58.851  INFO 19692 --- [SpringContextShutdownHook] c.e.x.config.listener.DemoListener       : 销毁servlet
+2023-03-06 16:19:58.896  INFO 19692 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-03-06 16:19:58.896  INFO 19692 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-03-06 16:19:58.909  INFO 19692 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-03-06 16:19:58.912  INFO 19692 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-03-06 16:20:02.854  INFO 9056 --- [main] com.example.xiaoheihe.Application        : Starting Application on DESKTOP-V5V13C7 with PID 9056 (D:\soft\workSpace\demo1\xiaoheihe\target\classes started by Administrator in D:\soft\workSpace\demo1)
+2023-03-06 16:20:02.856 DEBUG 9056 --- [main] com.example.xiaoheihe.Application        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2023-03-06 16:20:02.856  INFO 9056 --- [main] com.example.xiaoheihe.Application        : The following profiles are active: dev
+2023-03-06 16:20:03.421  INFO 9056 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-03-06 16:20:03.423  INFO 9056 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-03-06 16:20:03.449  INFO 9056 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 Redis repository interfaces.
+2023-03-06 16:20:04.043  INFO 9056 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8786 (http)
+2023-03-06 16:20:04.049  INFO 9056 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-06 16:20:04.049  INFO 9056 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2023-03-06 16:20:04.144  INFO 9056 --- [main] o.a.c.c.C.[.[localhost].[/xiaoheihe]     : Initializing Spring embedded WebApplicationContext
+2023-03-06 16:20:04.144  INFO 9056 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1244 ms
+2023-03-06 16:20:04.204  INFO 9056 --- [main] c.e.x.config.listener.DemoListener       : 初始化servlet
+2023-03-06 16:20:04.970  INFO 9056 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-06 16:20:05.359  INFO 9056 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@43ab0659, org.springframework.security.web.context.SecurityContextPersistenceFilter@18513c23, org.springframework.security.web.header.HeaderWriterFilter@2570b316, org.springframework.security.web.authentication.logout.LogoutFilter@1d806de6, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3e01796a, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@236fd411, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@644947ee, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2166c48a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7df3da0b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@25421809, org.springframework.security.web.session.SessionManagementFilter@131c0b6f, org.springframework.security.web.access.ExceptionTranslationFilter@3a8fb023, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3a709cc7]
+2023-03-06 16:20:05.422  INFO 9056 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8786 (http) with context path '/xiaoheihe'
+2023-03-06 16:20:05.429  INFO 9056 --- [main] com.example.xiaoheihe.Application        : Started Application in 2.963 seconds (JVM running for 3.586)
+2023-03-06 16:20:16.928  INFO 9056 --- [http-nio-8786-exec-1] o.a.c.c.C.[.[localhost].[/xiaoheihe]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-06 16:20:16.928  INFO 9056 --- [http-nio-8786-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-06 16:20:16.935  INFO 9056 --- [http-nio-8786-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2023-03-06 16:20:20.469  INFO 9056 --- [http-nio-8786-exec-3] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-03-06 16:20:20.798 DEBUG 9056 --- [http-nio-8786-exec-3] c.e.x.dao.UserMapper.selectUserList      : ==>  Preparing: select id,username,password,`name`,login_failed_times from login_User where username = ? order by id limit 0,20
+2023-03-06 16:20:20.813 DEBUG 9056 --- [http-nio-8786-exec-3] c.e.x.dao.UserMapper.selectUserList      : ==> Parameters: admin(String)
+2023-03-06 16:20:20.829 DEBUG 9056 --- [http-nio-8786-exec-3] c.e.x.dao.UserMapper.selectUserList      : <==      Total: 1
+2023-03-06 16:21:08.003 DEBUG 9056 --- [http-nio-8786-exec-4] c.e.x.dao.UserMapper.selectUserList      : ==>  Preparing: select id,username,password,`name`,login_failed_times from login_User where username = ? order by id limit 0,20
+2023-03-06 16:21:08.003 DEBUG 9056 --- [http-nio-8786-exec-4] c.e.x.dao.UserMapper.selectUserList      : ==> Parameters: admin(String)
+2023-03-06 16:21:08.005 DEBUG 9056 --- [http-nio-8786-exec-4] c.e.x.dao.UserMapper.selectUserList      : <==      Total: 1
+2023-03-06 16:21:51.790  INFO 9056 --- [SpringContextShutdownHook] c.e.x.config.listener.DemoListener       : 销毁servlet
+2023-03-06 16:21:51.836  INFO 9056 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-03-06 16:21:51.836  INFO 9056 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2023-03-06 16:21:51.849  INFO 9056 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-03-06 16:21:51.852  INFO 9056 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-03-06 16:21:55.819  INFO 23628 --- [main] com.example.xiaoheihe.Application        : Starting Application on DESKTOP-V5V13C7 with PID 23628 (D:\soft\workSpace\demo1\xiaoheihe\target\classes started by Administrator in D:\soft\workSpace\demo1)
+2023-03-06 16:21:55.822 DEBUG 23628 --- [main] com.example.xiaoheihe.Application        : Running with Spring Boot v2.3.5.RELEASE, Spring v5.2.10.RELEASE
+2023-03-06 16:21:55.822  INFO 23628 --- [main] com.example.xiaoheihe.Application        : The following profiles are active: dev
+2023-03-06 16:21:56.373  INFO 23628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-03-06 16:21:56.375  INFO 23628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-03-06 16:21:56.403  INFO 23628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 Redis repository interfaces.
+2023-03-06 16:21:56.986  INFO 23628 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8786 (http)
+2023-03-06 16:21:56.993  INFO 23628 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-06 16:21:56.993  INFO 23628 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2023-03-06 16:21:57.084  INFO 23628 --- [main] o.a.c.c.C.[.[localhost].[/xiaoheihe]     : Initializing Spring embedded WebApplicationContext
+2023-03-06 16:21:57.084  INFO 23628 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1211 ms
+2023-03-06 16:21:57.143  INFO 23628 --- [main] c.e.x.config.listener.DemoListener       : 初始化servlet
+2023-03-06 16:21:57.865  INFO 23628 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-03-06 16:21:58.244  INFO 23628 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3a70575, org.springframework.security.web.context.SecurityContextPersistenceFilter@3c544c9, org.springframework.security.web.header.HeaderWriterFilter@4f3fec43, org.springframework.security.web.authentication.logout.LogoutFilter@29c244e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1805ec96, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@182e4365, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5d96d434, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@213012a0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@38fb151a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7283877, org.springframework.security.web.session.SessionManagementFilter@419f0ea, org.springframework.security.web.access.ExceptionTranslationFilter@1851c7d2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1fa9692b]
+2023-03-06 16:21:58.311  INFO 23628 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8786 (http) with context path '/xiaoheihe'
+2023-03-06 16:21:58.321  INFO 23628 --- [main] com.example.xiaoheihe.Application        : Started Application in 2.933 seconds (JVM running for 3.748)
+2023-03-06 16:22:02.288  INFO 23628 --- [http-nio-8786-exec-1] o.a.c.c.C.[.[localhost].[/xiaoheihe]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-06 16:22:02.289  INFO 23628 --- [http-nio-8786-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-06 16:22:02.296  INFO 23628 --- [http-nio-8786-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2023-03-06 16:22:05.726  INFO 23628 --- [http-nio-8786-exec-3] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-03-06 16:22:06.066 DEBUG 23628 --- [http-nio-8786-exec-3] c.e.x.dao.UserMapper.selectUserList      : ==>  Preparing: select id,username,password,`name`,login_failed_times from login_User where username = ? order by id limit 0,20
+2023-03-06 16:22:06.082 DEBUG 23628 --- [http-nio-8786-exec-3] c.e.x.dao.UserMapper.selectUserList      : ==> Parameters: admin(String)
+2023-03-06 16:22:06.098 DEBUG 23628 --- [http-nio-8786-exec-3] c.e.x.dao.UserMapper.selectUserList      : <==      Total: 1
+2023-03-06 16:22:11.648 DEBUG 23628 --- [http-nio-8786-exec-5] c.e.x.dao.UserMapper.selectUserList      : ==>  Preparing: select id,username,password,`name`,login_failed_times from login_User where username = ? order by id limit 0,20
+2023-03-06 16:22:11.649 DEBUG 23628 --- [http-nio-8786-exec-5] c.e.x.dao.UserMapper.selectUserList      : ==> Parameters: admin(String)
+2023-03-06 16:22:11.652 DEBUG 23628 --- [http-nio-8786-exec-5] c.e.x.dao.UserMapper.selectUserList      : <==      Total: 1

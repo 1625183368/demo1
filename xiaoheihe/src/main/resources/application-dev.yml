@@ -26,8 +26,12 @@ spring:
     host: localhost
     port: 6379
     password:
+    database: 10
 
 
+    login:
+      token:
+        prefix: REDIS_LOGIN_TOKEN_
 logging:
   level:
     com.example: debug
@@ -39,6 +43,18 @@ mybatis:
   type-aliases-package: com.example.**.domain
   mapper-locations: classpath*:mapper/**/*Mapper.xml
 
+
+mq:
+  routingKey: TestDirectRouting
+  directExchange: directExchange
+
+rsa:
+  key:
+    pubKeyFile: /config/auth_key/id_key_rsa.pub
+    priKeyFile: /config/auth_key/id_key_rsa
+
+securityUrlConfig:
+  ignoreUrl: "/login.jsp,/failuer.jsp,/css/**,/img/**"
 
 
 
