@@ -21,6 +21,7 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserMapper userMapper;
 
+    //加载用户信息
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         LoginUser temp = new LoginUser();

@@ -24,8 +24,8 @@
             <if test="id != null and id != ''">
                 and id = #{id}
             </if>
-            <if test="userName != null and userName != ''">
-                and username = #{userName}
+            <if test="username != null and username != ''">
+                and username = #{username}
             </if>
         </trim>
         order by id

@@ -11,6 +11,7 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 import org.springframework.util.ObjectUtils;
@@ -28,6 +29,9 @@ public class MyAuthenticationProvider implements AuthenticationProvider {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
+    @Autowired
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
+
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
         // Principal 主体，一般指用户名
@@ -42,8 +46,7 @@ public class MyAuthenticationProvider implements AuthenticationProvider {
         LoginUser userDetails = (LoginUser) details;
         //数据库密码
         String encodedPassword = userDetails.getPassword();
-
-        if (!passwordEncoder.matches(encodedPassword, passWord)) {
+        if (!bCryptPasswordEncoder.matches(passWord, encodedPassword)) {
             throw new AuthenticationServiceException("账号或密码错误！");
         }
         List<GrantedAuthority> roles = new LinkedList<>();

@@ -14,8 +14,12 @@ public class MainTest {
 //        String[] strings = new String[6];
 //        strings = v1.split(",",6);
 //        System.out.println(strings.length);
-//        String admin = new BCryptPasswordEncoder().encode("admin");
+        BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
+//        String admin = bCryptPasswordEncoder.encode("admin");
 //        System.out.println(admin);
+        String password = "$2a$10$mkqJeBGJIl5cyocz3SYXduClgOCUdm4eDNkDgIko.CY5VjdszIop2";
+        boolean admin = bCryptPasswordEncoder.matches("admin", password);
+        System.out.println(admin);
 //        ItextTest itextTest = new ItextTest();
 //        String keyPath = itextTest.getClass().getClassLoader().getResource("").getPath();
 //
@@ -30,8 +34,8 @@ public class MainTest {
 //        demo.setmRID("1234");
 //        System.out.println(demo.getmRID());
 
-        TimeUnit seconds = TimeUnit.valueOf("SECONDS");
-        System.out.println(seconds);
+//        TimeUnit seconds = TimeUnit.valueOf("SECONDS");
+//        System.out.println(seconds);
     }
 
     public static void toDemo2(Demo demo){

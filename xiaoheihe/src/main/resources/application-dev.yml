@@ -32,6 +32,8 @@ spring:
     login:
       token:
         prefix: REDIS_LOGIN_TOKEN_
+        timeout: 60
+        timeunit: SECONDS
 logging:
   level:
     com.example: debug

@@ -5,13 +5,17 @@ import com.example.xiaoheihe.config.security.RsaKeyProperties;
 import com.example.xiaoheihe.domain.LoginUser;
 import com.example.xiaoheihe.domain.Payload;
 import com.example.xiaoheihe.utils.JWTUtils;
+import com.example.xiaoheihe.utils.RedisUtils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 import org.springframework.stereotype.Component;
+import org.springframework.util.ObjectUtils;
+import org.springframework.util.StringUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import javax.servlet.FilterChain;
@@ -22,11 +26,16 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 @Component
 public class TokenVerifyFilter extends OncePerRequestFilter {
     @Autowired
     private RsaKeyProperties rsaKeyProperties;
+    @Autowired
+    private RedisUtils redisUtils;
+    @Value("${spring.redis.login.token.prefix}")
+    private String REDISLOGINTOKENPREFIX;
 
 //    public TokenVerifyFilter(RsaKeyProperties rsaKeyProperties) {
 ////        super(authenticationManager);
@@ -53,15 +62,29 @@ public class TokenVerifyFilter extends OncePerRequestFilter {
         } else {
             //如果携带了正确格式的token要先得到token
             String token = header.replace("Bearer ", "");
-            //验证token是否正确
-            Payload<LoginUser> payload = JWTUtils.getInfoFromToken(token, rsaKeyProperties.getPublicKey(), LoginUser.class);
-            LoginUser user = payload.getUserInfo();
-            if(user!=null){
+            //验证redis中的token
+            LoginUser user = (LoginUser) redisUtils.get(redisUtils.getTokenPrefix() + token);
+            if (!ObjectUtils.isEmpty(user)){
+                //token续租
+                redisUtils.expire(redisUtils.getTokenPrefix() + token,redisUtils.getTimeOut(), redisUtils.getTimeUnit());
                 UsernamePasswordAuthenticationToken authResult = new UsernamePasswordAuthenticationToken(user.getUsername(), null, user.getAuthorities());
                 //******设置是否已认证
 //                authResult.setAuthenticated(true);
                 SecurityContextHolder.getContext().setAuthentication(authResult);
                 chain.doFilter(request, response);
+            }else {
+                //验证token是否正确
+                Payload<LoginUser> payload = JWTUtils.getInfoFromToken(token, rsaKeyProperties.getPublicKey(), LoginUser.class);
+                user = payload.getUserInfo();
+                if (user != null) {
+                    redisUtils.set(redisUtils.getTokenPrefix()+token,user,redisUtils.getTimeOut(),redisUtils.getTimeUnit());
+
+                    UsernamePasswordAuthenticationToken authResult = new UsernamePasswordAuthenticationToken(user.getUsername(), null, user.getAuthorities());
+                    //******设置是否已认证
+//                authResult.setAuthenticated(true);
+                    SecurityContextHolder.getContext().setAuthentication(authResult);
+                    chain.doFilter(request, response);
+                }
             }
         }
     }

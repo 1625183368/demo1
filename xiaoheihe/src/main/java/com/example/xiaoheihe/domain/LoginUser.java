@@ -23,29 +23,12 @@ public class LoginUser implements UserDetails {
         return auth;
     }
 
-
     public Integer getId() {
         return id;
     }
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Integer getLoginFailedTimes() {
-        return loginFailedTimes;
-    }
-
-    public void setLoginFailedTimes(Integer loginFailedTimes) {
-        this.loginFailedTimes = loginFailedTimes;
     }
 
     @Override
@@ -64,6 +47,22 @@ public class LoginUser implements UserDetails {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getLoginFailedTimes() {
+        return loginFailedTimes;
+    }
+
+    public void setLoginFailedTimes(Integer loginFailedTimes) {
+        this.loginFailedTimes = loginFailedTimes;
     }
 
     @JsonIgnore

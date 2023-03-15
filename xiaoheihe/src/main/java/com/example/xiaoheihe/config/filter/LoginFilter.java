@@ -46,12 +46,7 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
     @Autowired
     private RedisUtils redisUtils;
 
-    @Value("spring.redis.login.token.prefix")
-    private String REDISLOGINTOKENPREFIX;
-    @Value("spring.redis.login.token.timeout")
-    private String timeOut;
-    @Value("spring.redis.login.token.timeunit")
-    private String timeUnit;
+
 
 
 
@@ -101,7 +96,7 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
         //生成token
         String token = JWTUtils.generateTokenExpireInMinutes(user, rsaKeyProperties.getPrivateKey(), 24 * 60);
         //todo 将token放入redis
-        redisUtils.set(REDISLOGINTOKENPREFIX+user.getUsername(),token,Long.parseLong(timeOut), TimeUnit.valueOf(timeUnit));
+        redisUtils.set(redisUtils.getTokenPrefix()+token,user,redisUtils.getTimeOut(),redisUtils.getTimeUnit());
 
         response.addHeader("Authorization", "Bearer "+token);
         try {

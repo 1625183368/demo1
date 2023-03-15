@@ -131,10 +131,10 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest()
                 .authenticated()
                 .and()
+                //token认证
+                .addFilterAfter(tokenVerifyFilter, UsernamePasswordAuthenticationFilter.class)
                 //登陆认证
                 .addFilter(loginFilter)
-                //token认证
-                .addFilterBefore(tokenVerifyFilter, UsernamePasswordAuthenticationFilter.class)
                 //基于token，所以不需要session
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         http.logout()
