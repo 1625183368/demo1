@@ -2,9 +2,7 @@ package com.example.xiaoheihe;
 
 
 import com.example.xiaoheihe.config.security.RsaKeyProperties;
-import com.example.xiaoheihe.domain.DemoBean;
 import org.mybatis.spring.annotation.MapperScan;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
@@ -23,7 +21,6 @@ public class Application {
 
     public static void main(String[] args) {
         //spring容器初始化
-
         SpringApplication.run(Application.class,args);
     }
 

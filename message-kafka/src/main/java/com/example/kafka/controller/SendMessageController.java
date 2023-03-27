@@ -12,7 +12,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-//@RestController
+@RestController
 public class SendMessageController {
     @Autowired
     private RabbitTemplate rabbitTemplate;

@@ -1,7 +1,7 @@
 server:
   port: 8787
   servlet:
-    context-path: /kafka
+    context-path: /mq
 
 #spring:
 #  application:
@@ -41,13 +41,14 @@ mybatis:
 #spring:
 #  kafka:
 #    bootstrap-servers: localhost:8788
+
 spring:
   rabbitmq:
     host: 192.168.202.129
-    port: 8550
+    port: 5672
     username: root
     password: 123456
-    virtual-host: /
+    virtual-host: rabbitMQ01
 
 
 mq:

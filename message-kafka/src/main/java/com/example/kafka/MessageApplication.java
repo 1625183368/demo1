@@ -8,6 +8,6 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 public class MessageApplication {
     public static void main(String[] args) {
         SpringApplication.run(MessageApplication.class,args);
-        System.out.println("kafka服务启动成功");
+        System.out.println("mq service start up");
     }
 }
