@@ -31,3 +31,7 @@ xiaoheihe/target/generated-sources/
 .idea/
 xiaoheihe/dependency-reduced-pom.xml
 xiaoheihe/target/
+
+message-kafka/target/
+
+.idea
