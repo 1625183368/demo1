@@ -4,9 +4,12 @@ import com.example.xiaoheihe.domain.Demo;
 import com.example.xiaoheihe.utils.RsaUtils;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Stream;
 
 public class MainTest {
     public static void main(String[] args) throws Exception {
@@ -38,9 +41,10 @@ public class MainTest {
 //        TimeUnit seconds = TimeUnit.valueOf("SECONDS");
 //        System.out.println(seconds);
 
-        String str1 = ",,,";
-        String[] split = str1.split(",",1000);
-        System.out.println(split[2]);
+//        String str1 = ",,,";
+//        String[] split = str1.split(",",1000);
+//        System.out.println(split[2]);
+
     }
 
     public static void toDemo2(Demo demo){
