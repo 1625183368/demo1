@@ -5,7 +5,6 @@ import com.example.xiaoheihe.utils.RsaUtils;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.util.Arrays;
-import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
@@ -15,12 +14,12 @@ public class MainTest {
 //        String[] strings = new String[6];
 //        strings = v1.split(",",6);
 //        System.out.println(strings.length);
-//        BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
+        BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
 //        String admin = bCryptPasswordEncoder.encode("admin");
 //        System.out.println(admin);
-//        String password = "$2a$10$mkqJeBGJIl5cyocz3SYXduClgOCUdm4eDNkDgIko.CY5VjdszIop2";
-//        boolean admin = bCryptPasswordEncoder.matches("admin", password);
-//        System.out.println(admin);
+        String password = "$2a$10$mkqJeBGJIl5cyocz3SYXduClgOCUdm4eDNkDgIko.CY5VjdszIop2";
+        boolean admin = bCryptPasswordEncoder.matches("admin", password);
+        System.out.println(admin);
 //        ItextTest itextTest = new ItextTest();
 //        String keyPath = itextTest.getClass().getClassLoader().getResource("").getPath();
 //
@@ -37,59 +36,6 @@ public class MainTest {
 
 //        TimeUnit seconds = TimeUnit.valueOf("SECONDS");
 //        System.out.println(seconds);
-
-
-
-
-
-
-
-        String str = "%sa%sD%sCfer%sLui%s";
-        String result = str;
-
-        char[] cArray = {'B', 'D', 'F'};
-        int j = 0;
-        //统计%s出现的次数
-        for (int i = 0; true; i++) {
-            i = str.indexOf("%s", i);
-            if (i != -1) {
-                j++;
-                int index = j % cArray.length;
-                if (index == 0) {
-                    result = result.replaceFirst("%s", String.valueOf(cArray[cArray.length-1]));
-                }else {
-                    result = result.replaceFirst("%s",String.valueOf(cArray[index-1]));
-                }
-            } else {
-                break;
-            }
-        }
-
-
-
-
-
-
-
-
-//        if (j > 0) {
-//            //循环次数
-//            int count = j / cArray.length;
-//            int index = j % cArray.length;
-//            for (int i = 0; i < count; i++) {
-//                for (char c : cArray) {
-//                    result = result.replaceFirst("%s", String.valueOf(c));
-//                }
-//            }
-//            //补全
-//            if (index > 0) {
-//                for (int i = 0; i < index; i++) {
-//                    result = result.replaceFirst("%s", String.valueOf(cArray[i]));
-//                }
-//            }
-//        }
-//        List<String> list = Arrays.asList("a", "s", "c");
-        System.out.println(str + " ---> " + result);
     }
 
     public static void toDemo2(Demo demo){

@@ -45,8 +45,8 @@ public class DemoController {
         InputStream resourceAsStream = this.getClass().getClassLoader().getResourceAsStream("application-dev.yml");
         assert resourceAsStream != null;
         DownloadUtils.download(request,response,resourceAsStream,"application-dev.yml");
-
     }
+
 
     @PostMapping("/testGlobalException")
     public void testGlobalException(){

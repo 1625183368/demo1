@@ -8,8 +8,8 @@ import org.springframework.beans.factory.support.BeanDefinitionRegistryPostProce
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
-@Component
-public class DemoBean implements BeanDefinitionRegistryPostProcessor, InitializingBean,BeanNameAware, BeanFactoryAware, DisposableBean {
+//@Component
+public class DemoBean implements FactoryBean,BeanDefinitionRegistryPostProcessor, InitializingBean,BeanNameAware, BeanFactoryAware, DisposableBean {
 
     @Override
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
@@ -39,5 +39,15 @@ public class DemoBean implements BeanDefinitionRegistryPostProcessor, Initializi
     @Override
     public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
 
+    }
+
+    @Override
+    public Object getObject() throws Exception {
+        return null;
+    }
+
+    @Override
+    public Class<?> getObjectType() {
+        return null;
     }
 }
