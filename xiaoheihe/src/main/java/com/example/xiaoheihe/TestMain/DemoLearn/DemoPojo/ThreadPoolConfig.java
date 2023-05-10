@@ -1,10 +1,13 @@
 package com.example.xiaoheihe.TestMain.DemoLearn.DemoPojo;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
+import org.springframework.stereotype.Component;
 
 import java.util.concurrent.ThreadPoolExecutor;
 
-public class ThreadPoolTaskExecutors {
+@Component
+public class ThreadPoolConfig {
     // 核心线程池大小
     private int corePoolSize = 50;
 
@@ -17,15 +20,14 @@ public class ThreadPoolTaskExecutors {
     // 线程池维护线程所允许的空闲时间
     private int keepAliveSeconds = 300;
 
-    public ThreadPoolTaskExecutor executor;
-
-    public ThreadPoolTaskExecutors() {
+    @Bean(name = "threadPoolTaskExecutor")
+    public ThreadPoolTaskExecutor threadPoolTaskExecutor() {
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
         executor.setCorePoolSize(corePoolSize);
         executor.setMaxPoolSize(maxPoolSize);
         executor.setQueueCapacity(queueCapacity);
         executor.setKeepAliveSeconds(keepAliveSeconds);
         executor.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());
-        this.executor = executor;
+        return executor;
     }
 }

@@ -59,4 +59,10 @@ securityUrlConfig:
   ignoreUrl: "/login.jsp,/failuer.jsp,/css/**,/img/**"
 
 
-
+oss:
+  accessKeyId: LTAIiFezBad57uXs
+  accessKeySecret: yWhTGpXIAnPLkrMbsDNZBJOezFfCvF
+  endpoint: https://oss-cn-shanghai.aliyuncs.com
+  bucketName: yanxiaoneng
+  url: https://yanxiaoneng.oss-cn-shanghai.aliyuncs.com/
+  filePath: safety_tool/templates

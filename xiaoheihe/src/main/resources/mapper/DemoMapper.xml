@@ -41,4 +41,9 @@
             </if>
         </where>
     </select>
+
+    <insert id="insert" parameterType="com.example.xiaoheihe.domain.Demo">
+        insert into demo (mrid, remark, create_time, update_time, creator, dmlcode)
+        values(#{mRID},#{remark},#{createTime},#{updateTime},#{creator},#{dmlCode})
+    </insert>
 </mapper>

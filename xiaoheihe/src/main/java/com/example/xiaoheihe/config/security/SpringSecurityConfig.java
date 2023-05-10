@@ -59,8 +59,8 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     /**
      * token认证
      * */
-    @Autowired
-    private TokenVerifyFilter tokenVerifyFilter;
+//    @Autowired
+//    private TokenVerifyFilter tokenVerifyFilter;
 
     @Autowired
     private LoginFilter loginFilter;
@@ -118,32 +118,37 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 //                .and()
 //                .csrf()
 //                .disable();
-        http.csrf()
-                .disable()
-                //认证失败处理
-                .exceptionHandling().authenticationEntryPoint(entryPoint)
-                .and()
-                .authorizeRequests()
-                //匿名访问 不允许登陆后访问
-                .antMatchers("/login","/captchaImage").anonymous()
-                .antMatchers(HttpMethod.GET,ignoreURLs).permitAll()
-                //其他的需要鉴权
-                .anyRequest()
-                .authenticated()
-                .and()
-                //token认证
-                .addFilterAfter(tokenVerifyFilter, UsernamePasswordAuthenticationFilter.class)
-                //登陆认证
-                .addFilter(loginFilter)
-                //基于token，所以不需要session
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-        http.logout()
-                .logoutUrl("/logout")
-                .logoutSuccessHandler(logoutSuccessHandler)
-                .and()
-                .formLogin()
-                .loginProcessingUrl("/login")
-                .permitAll();
+
+        http.authorizeRequests().anyRequest().permitAll();
+
+
+//        http.csrf()
+//                .disable()
+//                //认证失败处理
+//                .exceptionHandling().authenticationEntryPoint(entryPoint)
+//                .and()
+//                .authorizeRequests()
+//                //匿名访问 不允许登陆后访问
+//                .antMatchers("/login","/captchaImage").anonymous()
+//                .antMatchers(HttpMethod.GET,ignoreURLs).permitAll()
+//                .antMatchers("/demo/download").permitAll()
+//                //其他的需要鉴权
+//                .anyRequest()
+//                .authenticated()
+//                .and()
+//                //token认证
+//                .addFilterAfter(tokenVerifyFilter, UsernamePasswordAuthenticationFilter.class)
+//                //登陆认证
+//                .addFilter(loginFilter)
+//                //基于token，所以不需要session
+//                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+//        http.logout()
+//                .logoutUrl("/logout")
+//                .logoutSuccessHandler(logoutSuccessHandler)
+//                .and()
+//                .formLogin()
+//                .loginProcessingUrl("/login")
+//                .permitAll();
     }
 
 

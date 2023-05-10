@@ -13,4 +13,6 @@ public interface DemoMapper {
     List<Demo> selectDemoList(Demo demo);
 
     Integer selectCount(Demo demo);
+
+    void insert(Demo demo);
 }

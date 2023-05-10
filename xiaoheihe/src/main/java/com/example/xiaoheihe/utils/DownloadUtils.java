@@ -35,7 +35,10 @@ public class DownloadUtils {
     }
     public static void download(HttpServletRequest request, HttpServletResponse response, InputStream inputStream,String fileName) throws IOException {
         response.setCharacterEncoding("utf-8");
-        response.setContentType("multipart/form-data");
+//        response.setContentType("multipart/form-data");
+//        response.setContentType("application/vnd.openxmlformats-officedocument.wordprocessingml.document"); //docx
+//        response.setContentType("application/msword");  //doc
+        response.setContentType("application/pdf"); //pdf
         response.setHeader("Content-Disposition","attachment;fileName=" + fileName);
         OutputStream outputStream = null;
         try {
@@ -46,6 +49,7 @@ public class DownloadUtils {
             while ((length = inputStream.read(bytes)) > 0){
                 outputStream.write(bytes,0,length);
             }
+            System.out.println("文件传输结束");
         } catch (IOException e) {
             e.printStackTrace();
         } finally {

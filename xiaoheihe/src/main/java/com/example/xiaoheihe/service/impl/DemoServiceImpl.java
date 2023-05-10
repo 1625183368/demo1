@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashMap;
 import java.util.List;
@@ -50,5 +51,23 @@ public class DemoServiceImpl implements DemoService {
 //        dataMap.put(SqlConstant.LIST,dataList);
 //        dataMap.put(SqlConstant.TOTALNUM,integer);
 //        return dataMap;
+    }
+
+    @Override
+    @Transactional
+    public void testTransaction() {
+        Demo demo = new Demo();
+        demo.setmRID("77777777");
+        demo.setDmlCode("i");
+        demo.setCreator("admin1");
+        demoMapper.insert(demo);
+
+        demo.setCreator("admin2");
+        demo.setmRID("666666667");
+        demoMapper.insert(demo);
+
+//        int i = 1/0;
+//        demo.setmRID("555555");
+//        demoMapper.insert(demo);
     }
 }

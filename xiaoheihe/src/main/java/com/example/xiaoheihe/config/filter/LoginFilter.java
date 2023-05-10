@@ -48,8 +48,6 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
 
 
 
-
-
     public LoginFilter() {
         //设置认证管理器(对登录请求进行认证和授权)
 //        this.authenticationManager = authenticationManager;
@@ -107,6 +105,7 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
                 {
                     put("code", HttpServletResponse.SC_OK);
                     put("msg", "认证通过！");
+                    put("token",token);
                 }
             };
 

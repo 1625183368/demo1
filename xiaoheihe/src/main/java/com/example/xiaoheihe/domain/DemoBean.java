@@ -5,10 +5,9 @@ import org.springframework.beans.factory.*;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.BeanDefinitionRegistryPostProcessor;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
-//@Component
+@Component
 public class DemoBean implements FactoryBean,BeanDefinitionRegistryPostProcessor, InitializingBean,BeanNameAware, BeanFactoryAware, DisposableBean {
 
     @Override
@@ -50,4 +49,6 @@ public class DemoBean implements FactoryBean,BeanDefinitionRegistryPostProcessor
     public Class<?> getObjectType() {
         return null;
     }
+
+
 }

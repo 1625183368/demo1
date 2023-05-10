@@ -1,13 +1,19 @@
 package com.example.xiaoheihe.TestMain;
 
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.example.xiaoheihe.domain.Demo;
 import com.example.xiaoheihe.utils.RsaUtils;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.util.CollectionUtils;
+import org.springframework.util.ObjectUtils;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Stream;
 
@@ -44,7 +50,8 @@ public class MainTest {
 //        String str1 = ",,,";
 //        String[] split = str1.split(",",1000);
 //        System.out.println(split[2]);
-
+        List<String> list = Arrays.asList("111","23123");
+        System.out.println(list.contains("0"));
     }
 
     public static void toDemo2(Demo demo){
