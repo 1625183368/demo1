@@ -26,8 +26,8 @@ public class MyAuthenticationProvider implements AuthenticationProvider {
     @Autowired
     private UserService userDetailsService;
 
-    @Autowired
-    private PasswordEncoder passwordEncoder;
+//    @Autowired
+//    private PasswordEncoder passwordEncoder;
 
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;

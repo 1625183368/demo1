@@ -17,4 +17,5 @@ public class DemoThread implements Callable {
         log.info("售出票：{}",num);
         return num--;
     }
+
 }

@@ -38,7 +38,7 @@ public class RabbitConfig {
 //        return new CustomExchange("delayExchange1", "x-delayed-message", true, false, args);
 //    }
     @Bean
-    public Binding bindingQueue1(@Qualifier("queue1") Queue queue, DirectExchange directExchange1){
+    public Binding bindingQueue1(@Qualifier("queue1") Queue queue, @Qualifier("directExchange1") DirectExchange directExchange1){
         //把队列和交换机进行一个绑定。这里的routingKey使用的是队列名
         return BindingBuilder.bind(queue).to(directExchange1).with(routingKey);
     }

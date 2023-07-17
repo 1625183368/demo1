@@ -14,6 +14,6 @@ public class LogoutSuccess implements LogoutSuccessHandler {
 
     @Override
     public void onLogoutSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
-
+        //清除用户登录记录 token
     }
 }

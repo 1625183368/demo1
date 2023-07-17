@@ -45,6 +45,7 @@ public class Demo01Fun {
 //        System.out.println(list.stream().filter(f->f.contains("ppp")).findAny().orElse("no"));
 //        List<Integer> integers = Arrays.asList(1, 2, 3, 4, 5);
         Parent parent = new Parent();
+
         parent.setName("testName");
         System.out.println(parent);
         refectFun1(parent);

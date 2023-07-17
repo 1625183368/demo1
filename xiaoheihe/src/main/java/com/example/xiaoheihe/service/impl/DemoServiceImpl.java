@@ -17,6 +17,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Queue;
 
 @Service
 public class DemoServiceImpl implements DemoService {
@@ -28,8 +29,7 @@ public class DemoServiceImpl implements DemoService {
 
     @DataSource(DataSourceType.MASTER)
     public Map<String,Object> getDemoList(Demo demo) {
-        demoService.testDataSource();
-
+        testDataSource();
 
         List<Demo> dataList = demoMapper.selectDemoList(demo);
         Integer integer = demoMapper.selectCount(demo);
@@ -40,10 +40,9 @@ public class DemoServiceImpl implements DemoService {
         return dataMap;
     }
 
-    @DataSource(DataSourceType.MASTER)
+    @DataSource(DataSourceType.SLAVE)
     public void testDataSource() {
         System.out.println("-----------------");
-
 //        List<Demo> dataList = demoMapper.selectDemoList(demo);
 //        Integer integer = demoMapper.selectCount(demo);
 //

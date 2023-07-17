@@ -56,7 +56,7 @@ rsa:
     priKeyFile: /config/auth_key/id_key_rsa
 
 securityUrlConfig:
-  ignoreUrl: "/login.jsp,/failuer.jsp,/css/**,/img/**"
+  ignoreUrl: "/login.jsp,/failuer.jsp,/css/**,/img/**,/demo/download"
 
 
 oss:

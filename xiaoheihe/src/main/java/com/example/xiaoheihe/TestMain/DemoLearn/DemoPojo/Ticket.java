@@ -1,6 +1,6 @@
 package com.example.xiaoheihe.TestMain.DemoLearn.DemoPojo;
 
-public class Ticket {
+public class Ticket extends ClassLoader{
     private String ticketName;
     private Integer num;
 

@@ -4,51 +4,56 @@ import com.example.xiaoheihe.domain.Demo;
 import com.example.xiaoheihe.utils.RsaUtils;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.ReentrantLock;
 import java.util.stream.Stream;
 
 public class MainTest {
     public static void main(String[] args) throws Exception {
-//        String v1 = "a,b,,";
-//        String[] strings = new String[6];
-//        strings = v1.split(",",6);
-//        System.out.println(strings.length);
-//        BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
-//        String admin = bCryptPasswordEncoder.encode("admin");
-//        System.out.println(admin);
-//        String password = "$2a$10$mkqJeBGJIl5cyocz3SYXduClgOCUdm4eDNkDgIko.CY5VjdszIop2";
-//        boolean admin = bCryptPasswordEncoder.matches("admin", password);
-//        System.out.println(admin);
 
-//        ItextTest itextTest = new ItextTest();
-//        String keyPath = itextTest.getClass().getClassLoader().getResource("").getPath();
-//
-//        System.out.println(keyPath);
-//        String privateKey = keyPath + "config/auth_key/"+"id_key_rsa2";
-//
-//        String publicKey = keyPath + "config/auth_key/"+"id_key_rsa2.pub";
-//        RsaUtils.generateKey(publicKey,privateKey,"demo2",1024);
-//        Demo demo = new Demo();
-//        toDemo2(demo);
-//        System.out.println(demo.getmRID());
-//        demo.setmRID("1234");
-//        System.out.println(demo.getmRID());
-
-//        TimeUnit seconds = TimeUnit.valueOf("SECONDS");
-//        System.out.println(seconds);
-
-//        String str1 = ",,,";
-//        String[] split = str1.split(",",1000);
-//        System.out.println(split[2]);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("请输入start开始计算,如需退出请输入q");
+        while (scanner.hasNext()){
+            String input = scanner.nextLine();
+            if (input.equals("start")){
+                System.out.println("开始计算,请输入数量");
+                continue;
+            }
+            if (input.equals("q")){
+                break;
+            }
+            int n = Integer.parseInt(input);
+            System.out.println(generateParenthesis(n).toString());
+        }
 
     }
 
-    public static void toDemo2(Demo demo){
-        demo.setmRID("123");
-//        System.out.println(demo.getmRID());
+    public static List<String> generateParenthesis(int n) {
+        List<String> ans = new ArrayList<>();
+        backtrack(ans,new StringBuilder(),0,0,n);
+        return ans;
+    }
+    // (((
+    public static void backtrack(List<String> ans, StringBuilder cur, int leftCount, int rightCount, int max){
+        //达到最长字符串放入list
+        if (max * 2 == cur.length()){
+            ans.add(cur.toString());
+            return;
+        }
+        //左边的数量小于最大字符串 则往里面增加 ""->"("
+        if (leftCount < max){
+            cur.append('(');
+            backtrack(ans,cur,leftCount+1,rightCount,max);
+            cur.deleteCharAt(cur.length()-1);
+        }
+        //左边的数量大于右边 左边减一个 右边加一个  "(" -> "()"
+        if (leftCount > rightCount){
+            cur.append(')');
+            backtrack(ans,cur,leftCount,rightCount+1,max);
+            cur.deleteCharAt(cur.length()-1);
+        }
+        //左等于右则平衡
     }
 }

@@ -23,24 +23,23 @@ import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
 
-//@Component
+@Component
 public class TokenVerifyFilter extends OncePerRequestFilter {
     @Autowired
-    private RsaKeyProperties rsaKeyProperties;
+    private final RsaKeyProperties rsaKeyProperties;
     @Autowired
     private RedisUtils redisUtils;
     @Value("${spring.redis.login.token.prefix}")
     private String REDISLOGINTOKENPREFIX;
 
-//    public TokenVerifyFilter(RsaKeyProperties rsaKeyProperties) {
-////        super(authenticationManager);
-//        this.rsaKeyProperties = rsaKeyProperties;
-//    }
+    public TokenVerifyFilter(RsaKeyProperties rsaKeyProperties) {
+//        super(authenticationManager);
+        this.rsaKeyProperties = rsaKeyProperties;
+    }
     public void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException {
         String header = request.getHeader("Authorization");
         if (header == null || !header.startsWith("Bearer ")) {
             //如果携带错误的token，则给用户提示请登录！
-            // chain.doFilter(request, response);
             response.setContentType("application/json;charset=utf-8");
             response.setStatus(HttpServletResponse.SC_FORBIDDEN);
             PrintWriter out = response.getWriter();
@@ -54,6 +53,7 @@ public class TokenVerifyFilter extends OncePerRequestFilter {
             out.write(new ObjectMapper().writeValueAsString(resultMap));
             out.flush();
             out.close();
+//            chain.doFilter(request, response);
         } else {
             //如果携带了正确格式的token要先得到token
             String token = header.replace("Bearer ", "");
@@ -76,7 +76,7 @@ public class TokenVerifyFilter extends OncePerRequestFilter {
 
                     UsernamePasswordAuthenticationToken authResult = new UsernamePasswordAuthenticationToken(user.getUsername(), null, user.getAuthorities());
                     //******设置是否已认证
-//                authResult.setAuthenticated(true);
+//                    authResult.setAuthenticated(true);
                     SecurityContextHolder.getContext().setAuthentication(authResult);
                     chain.doFilter(request, response);
                 }

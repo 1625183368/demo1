@@ -43,10 +43,10 @@ mybatis:
 #    bootstrap-servers: localhost:8788
 spring:
   rabbitmq:
-    host: 192.168.202.129
-    port: 8550
-    username: root
-    password: 123456
+    host: 192.168.11.4
+    port: 5672
+    username: admin
+    password: admin
     virtual-host: /
 
 

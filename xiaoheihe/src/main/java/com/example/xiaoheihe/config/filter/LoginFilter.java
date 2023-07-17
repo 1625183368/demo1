@@ -1,19 +1,14 @@
 package com.example.xiaoheihe.config.filter;
 
-import com.alibaba.fastjson.JSONObject;
 import com.example.xiaoheihe.config.security.LoginFailuer;
 import com.example.xiaoheihe.config.security.LoginSuccess;
 import com.example.xiaoheihe.config.security.MyAuthenticationProvider;
 import com.example.xiaoheihe.config.security.RsaKeyProperties;
 import com.example.xiaoheihe.domain.LoginUser;
-import com.example.xiaoheihe.service.TokenService;
 import com.example.xiaoheihe.utils.JWTUtils;
 import com.example.xiaoheihe.utils.RedisUtils;
-import com.example.xiaoheihe.utils.RsaUtils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -26,11 +21,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.ObjectInputStream;
 import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.TimeUnit;
 
 //1 attemptAuthentication
 @Component
@@ -80,6 +73,7 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
                 out.write(new ObjectMapper().writeValueAsString(resultMap));
                 out.flush();
                 out.close();
+
             }catch (Exception outEx){
                 outEx.printStackTrace();
             }
@@ -96,7 +90,7 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
         //todo 将token放入redis
         redisUtils.set(redisUtils.getTokenPrefix()+token,user,redisUtils.getTimeOut(),redisUtils.getTimeUnit());
 
-        response.addHeader("Authorization", "Bearer "+token);
+        response.addHeader("Authorization", "Bearer "+ token);
         try {
             response.setContentType("application/json;charset=utf-8");
             response.setStatus(HttpServletResponse.SC_OK);
