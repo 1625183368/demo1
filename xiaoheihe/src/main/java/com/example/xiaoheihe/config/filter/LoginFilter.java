@@ -1,5 +1,7 @@
 package com.example.xiaoheihe.config.filter;
 
+import com.alibaba.fastjson.JSONObject;
+import com.example.xiaoheihe.config.BodyReaderHttpServletRequestWrapper;
 import com.example.xiaoheihe.config.security.LoginFailuer;
 import com.example.xiaoheihe.config.security.LoginSuccess;
 import com.example.xiaoheihe.config.security.MyAuthenticationProvider;
@@ -26,27 +28,28 @@ import java.util.HashMap;
 import java.util.Map;
 
 //1 attemptAuthentication
-@Component
+//@Component
 public class LoginFilter extends UsernamePasswordAuthenticationFilter {
-    @Autowired
-    private MyAuthenticationProvider authenticationManager;
-    @Autowired
-    private RsaKeyProperties rsaKeyProperties;
-    @Autowired
-    LoginSuccess loginSuccessHandler;
-    @Autowired
-    LoginFailuer loginFailuerHandler;
-    @Autowired
-    private RedisUtils redisUtils;
+//    @Autowired
+    private final MyAuthenticationProvider authenticationManager;
+//    @Autowired
+    private final RsaKeyProperties rsaKeyProperties;
+//    @Autowired
+    private final RedisUtils redisUtils;
+//    @Autowired
+//    LoginSuccess loginSuccessHandler;
+//    @Autowired
+//    LoginFailuer loginFailuerHandler;
 
 
 
-    public LoginFilter() {
+
+
+    public LoginFilter(MyAuthenticationProvider authenticationManager,RsaKeyProperties rsaKeyProperties,RedisUtils redisUtils) {
         //设置认证管理器(对登录请求进行认证和授权)
-//        this.authenticationManager = authenticationManager;
-//        this.rsaKeyProperties = rsaKeyProperties;
-//        this.setAuthenticationSuccessHandler(loginSuccessHandler);
-//        this.setAuthenticationFailureHandler(loginFailuerHandler);
+        this.authenticationManager = authenticationManager;
+        this.rsaKeyProperties = rsaKeyProperties;
+        this.redisUtils = redisUtils;
         super.setFilterProcessesUrl("/login");
     }
 
@@ -54,8 +57,9 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
     @Override
     public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException {
         try {
-            LoginUser loginUser = new ObjectMapper().readValue(request.getInputStream(), LoginUser.class);
-
+            BodyReaderHttpServletRequestWrapper requestWrapper = new BodyReaderHttpServletRequestWrapper(request);
+            String body = requestWrapper.getBody();
+            LoginUser loginUser = JSONObject.parseObject(body).toJavaObject(LoginUser.class);
             UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(loginUser.getUsername(),loginUser.getPassword());
 //            usernamePasswordAuthenticationToken.setDetails(放用户信息);
             return authenticationManager.authenticate(usernamePasswordAuthenticationToken);
@@ -77,7 +81,9 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
             }catch (Exception outEx){
                 outEx.printStackTrace();
             }
-            throw new RuntimeException(e);
+//            throw new RuntimeException();
+            logger.warn("登录失败");
+            return null;
         }
     }
 
@@ -109,12 +115,6 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
         }catch (Exception outEx){
             outEx.printStackTrace();
         }
-    }
-
-    @Autowired
-    @Override
-    public void setAuthenticationManager(AuthenticationManager authenticationManager) {
-        super.setAuthenticationManager(authenticationManager);
     }
 
 }

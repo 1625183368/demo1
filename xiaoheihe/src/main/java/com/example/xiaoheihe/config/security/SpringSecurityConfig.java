@@ -7,6 +7,8 @@ import com.arronlong.httpclientutil.exception.HttpProcessException;
 import com.example.xiaoheihe.config.filter.LoginFilter;
 import com.example.xiaoheihe.config.filter.TokenVerifyFilter;
 import com.example.xiaoheihe.service.UserService;
+import com.example.xiaoheihe.utils.RedisUtils;
+import jdk.nashorn.internal.parser.Token;
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
@@ -30,6 +32,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.filter.CorsFilter;
 import org.w3c.dom.html.HTMLParagraphElement;
 import sun.net.www.http.HttpClient;
 
@@ -43,6 +46,14 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     /**
      * 核心为loginfilter和tokenfilter
      * */
+
+    @Autowired
+    private MyAuthenticationProvider authenticationManager;
+    @Autowired
+    private RsaKeyProperties rsaKeyProperties;
+    @Autowired
+    private RedisUtils redisUtils;
+
 
     @Autowired
     private UserService userService;
@@ -76,11 +87,10 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     /**
      * token认证
      * */
-    @Autowired
-    private TokenVerifyFilter tokenVerifyFilter;
 
-    @Autowired
-    private LoginFilter loginFilter;
+
+//    @Autowired
+//    private CorsFilter corsFilter;
 
     @Value("securityUrlConfig.ignoreUrl")
     private String ignoreUrl;
@@ -97,6 +107,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
      * @param auth
      * @throws Exception
      */
+    @Override
     public void configure(AuthenticationManagerBuilder auth) throws Exception {
 //        auth.inMemoryAuthentication()
 //                .withUser("admin")
@@ -106,12 +117,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
         auth.userDetailsService(userService).passwordEncoder(passwordEncoder);
     }
 
-//    @Override
-//    public void configure(WebSecurity web) throws Exception {
-//        web.ignoring().mvcMatchers("/users/getAdminToken");
-//        super.configure(web);
-//    }
-
+    @Override
     public void configure(HttpSecurity http) throws Exception {
         String[] ignoreURLs = ignoreUrl.split(",");
 
@@ -146,13 +152,13 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf()
                 .disable()
                 //认证失败处理
-                .exceptionHandling().authenticationEntryPoint(entryPoint)
-                .and()
+//                .exceptionHandling().authenticationEntryPoint(entryPoint)
+//                .and()
 
                 .authorizeRequests()
                 //匿名访问 不允许登陆后访问
                 .antMatchers("/login","/captchaImage").anonymous()
-                .antMatchers(HttpMethod.GET,"/users/getAdminToken").permitAll()
+                .antMatchers(HttpMethod.POST,"/users/getAdminToken","/demo/explainBean").permitAll()
                 .antMatchers(HttpMethod.GET,ignoreURLs).permitAll()
 
                 //其他的需要鉴权
@@ -160,9 +166,9 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authenticated()
                 .and()
                 //登陆认证
-                .addFilter(loginFilter)
+                .addFilter(new LoginFilter(authenticationManager,rsaKeyProperties,redisUtils))
                 //token认证
-                .addFilterAfter(tokenVerifyFilter, UsernamePasswordAuthenticationFilter.class)
+                .addFilter(new TokenVerifyFilter(authenticationManager,rsaKeyProperties,redisUtils))
                 //基于token，所以不需要session
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         http.logout()

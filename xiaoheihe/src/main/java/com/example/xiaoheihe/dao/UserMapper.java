@@ -13,5 +13,4 @@ public interface UserMapper {
     List<LoginUser> selectUserList(LoginUser demo);
 
     Integer selectCount(LoginUser demo);
-
 }

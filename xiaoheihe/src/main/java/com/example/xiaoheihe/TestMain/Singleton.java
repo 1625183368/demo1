@@ -40,9 +40,11 @@ public class Singleton {
 //        System.out.println(singleton==instance2?"02":"-");
 //        System.out.println(instance1==instance2?"12":"-");
 
+
         String str1 = "abc";  //常量池
         String str2 = new String("abc"); //堆
-        str1 = str1.intern(); //常量池的引用 堆的地址
+
+//        str1 = str1.intern(); //常量池的引用 堆的地址
 
 
         System.out.println(str1 == str2.intern() ? "12" : "");

@@ -1,5 +1,6 @@
 package com.example.xiaoheihe.TestMain;
 
+import com.example.xiaoheihe.domain.Window;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 import java.util.concurrent.CountDownLatch;
@@ -24,13 +25,14 @@ public class ThreadTest {
     public static void main(String[] args) throws InterruptedException {
 
 
-//        ThreadPoolTaskExecutor threadPoolTaskExecutor = new ThreadPoolTaskExecutor();
-//        threadPoolTaskExecutor.setCorePoolSize(5);
-//        threadPoolTaskExecutor.setMaxPoolSize(10);
-//        threadPoolTaskExecutor.setQueueCapacity(100);
-//        threadPoolTaskExecutor.setKeepAliveSeconds(500);
-//        threadPoolTaskExecutor.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());
-//        threadPoolTaskExecutor.initialize();
+        ThreadPoolTaskExecutor threadPoolTaskExecutor = new ThreadPoolTaskExecutor();
+        threadPoolTaskExecutor.setBeanName("售票窗口-");
+        threadPoolTaskExecutor.setCorePoolSize(5);
+        threadPoolTaskExecutor.setMaxPoolSize(10);
+        threadPoolTaskExecutor.setQueueCapacity(100);
+        threadPoolTaskExecutor.setKeepAliveSeconds(500);
+        threadPoolTaskExecutor.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());
+        threadPoolTaskExecutor.initialize();
 //        CountDownLatch countDownLatch = new CountDownLatch(1);
 //        StringBuffer sb = new StringBuffer();
 //        for (int i=0; i<100 ; i++) {
@@ -44,7 +46,7 @@ public class ThreadTest {
 //
 //        countDownLatch.await();
 //        threadPoolTaskExecutor.shutdown();
-        System.out.println(String.format("start%s45678:%d%%","图片",10));
+//        System.out.println(String.format("start%s45678:%d%%","图片",10));
 
 
 //        int i = 0;
@@ -60,7 +62,14 @@ public class ThreadTest {
 //                System.out.println(Thread.currentThread().getName()+ "    " + j +"a");
 //            });
 //        }
+        Window window = new Window();
 
+//        new Thread(window,"窗口1").start();
+//        new Thread(window,"窗口2").start();
+//        new Thread(window,"窗口3").start();
+        threadPoolTaskExecutor.submit(window);
+        threadPoolTaskExecutor.execute(window);
+        threadPoolTaskExecutor.execute(window);
 
     }
 

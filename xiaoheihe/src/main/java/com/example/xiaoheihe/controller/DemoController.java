@@ -3,6 +3,9 @@ package com.example.xiaoheihe.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import com.example.xiaoheihe.domain.Demo;
+import com.example.xiaoheihe.domain.DemoBean;
+import com.example.xiaoheihe.domain.DemoBean2;
+import com.example.xiaoheihe.domain.ExplainBean;
 import com.example.xiaoheihe.resultEntity.Result;
 import com.example.xiaoheihe.service.DemoService;
 import com.example.xiaoheihe.utils.DownloadUtils;
@@ -15,6 +18,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 
 
 @RestController
@@ -24,7 +28,8 @@ public class DemoController {
     private DemoService demoService;
     @Autowired
     private RedisUtils redisUtils;
-
+    @Autowired
+    private DemoBean demoBean;
 
     ThreadLocal<String> num = new ThreadLocal<>();
 
@@ -64,5 +69,11 @@ public class DemoController {
     public Result testTransaction(){
         demoService.testTransaction();
         return Result.success();
+    }
+
+    @PostMapping("/explainBean")
+    public Result explainBean(){
+        List<ExplainBean> explainBeans = demoBean.getExplainBeans();
+        return Result.success(explainBeans);
     }
 }

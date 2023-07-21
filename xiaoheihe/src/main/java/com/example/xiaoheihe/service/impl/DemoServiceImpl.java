@@ -20,6 +20,7 @@ import java.util.Map;
 import java.util.Queue;
 
 @Service
+@Scope("singleton")
 public class DemoServiceImpl implements DemoService {
 
     @Autowired
@@ -30,7 +31,8 @@ public class DemoServiceImpl implements DemoService {
     @DataSource(DataSourceType.MASTER)
     public Map<String,Object> getDemoList(Demo demo) {
         testDataSource();
-
+        this.testDataSource();
+        demoService.testDataSource();
         List<Demo> dataList = demoMapper.selectDemoList(demo);
         Integer integer = demoMapper.selectCount(demo);
 

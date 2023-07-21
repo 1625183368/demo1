@@ -1,6 +1,7 @@
 package com.example.xiaoheihe.config.filter;
 
 import com.example.xiaoheihe.domain.Demo;
+import lombok.SneakyThrows;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,9 +20,10 @@ public class DemoFilter implements Filter {
         log.info("自定义filter结束");
     }
 
+    @SneakyThrows
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-
+        Thread.sleep(5000);
     }
 
     @Override

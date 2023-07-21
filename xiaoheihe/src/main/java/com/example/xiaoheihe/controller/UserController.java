@@ -7,6 +7,7 @@ import com.arronlong.httpclientutil.common.HttpHeader;
 import com.arronlong.httpclientutil.exception.HttpProcessException;
 import com.example.xiaoheihe.dao.UserMapper;
 import com.example.xiaoheihe.domain.DemoBean;
+import com.example.xiaoheihe.domain.DemoBean2;
 import com.example.xiaoheihe.domain.LoginUser;
 import com.example.xiaoheihe.resultEntity.Result;
 import com.example.xiaoheihe.service.UserService;
@@ -45,7 +46,7 @@ public class UserController {
 //        return routingKey + " " + directExchange;
 //    }
 
-    @GetMapping("/getAdminToken")
+    @PostMapping("/getAdminToken")
     public String query() throws HttpProcessException {
         String url = "http://localhost:8786/xiaoheihe/login";
         Header[] headers = HttpHeader.custom().contentType("application/json").build();

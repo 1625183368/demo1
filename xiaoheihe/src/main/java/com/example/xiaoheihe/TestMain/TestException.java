@@ -13,6 +13,7 @@ public class TestException {
         }catch (Exception e){
             log.error("err",e);
             System.out.println("error");
+            throw e;
         }
         System.out.println("错误");
     }

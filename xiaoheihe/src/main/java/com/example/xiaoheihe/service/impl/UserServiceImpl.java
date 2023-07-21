@@ -10,6 +10,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
+import org.springframework.util.StringUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +25,9 @@ public class UserServiceImpl implements UserService {
     //加载用户信息
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        if (StringUtils.isEmpty(username)){
+            return null;
+        }
         LoginUser temp = new LoginUser();
         temp.setUsername(username);
         List<LoginUser> loginUsers = userMapper.selectUserList(temp);

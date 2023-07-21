@@ -3,6 +3,7 @@ package com.example.xiaoheihe.config.security;
 import com.example.xiaoheihe.domain.LoginUser;
 import com.example.xiaoheihe.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.AuthenticationServiceException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -15,13 +16,14 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 import org.springframework.util.ObjectUtils;
+import org.springframework.util.StringUtils;
 
 import java.util.LinkedList;
 import java.util.List;
 
 //2 authenticate
 @Component
-public class MyAuthenticationProvider implements AuthenticationProvider {
+public class MyAuthenticationProvider implements AuthenticationProvider, AuthenticationManager {
 
     @Autowired
     private UserService userDetailsService;

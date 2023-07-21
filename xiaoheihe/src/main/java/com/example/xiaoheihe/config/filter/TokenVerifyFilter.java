@@ -1,5 +1,6 @@
 package com.example.xiaoheihe.config.filter;
 
+import com.example.xiaoheihe.config.security.MyAuthenticationProvider;
 import com.example.xiaoheihe.config.security.RsaKeyProperties;
 import com.example.xiaoheihe.domain.LoginUser;
 import com.example.xiaoheihe.domain.Payload;
@@ -10,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 import org.springframework.stereotype.Component;
 import org.springframework.util.ObjectUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
@@ -23,37 +25,40 @@ import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
 
-@Component
-public class TokenVerifyFilter extends OncePerRequestFilter {
-    @Autowired
+//@Component
+public class TokenVerifyFilter extends BasicAuthenticationFilter {
+//    @Autowired
     private final RsaKeyProperties rsaKeyProperties;
-    @Autowired
-    private RedisUtils redisUtils;
+//    @Autowired
+//    private MyAuthenticationProvider authenticationManager;
+//    @Autowired
+    private final RedisUtils redisUtils;
     @Value("${spring.redis.login.token.prefix}")
     private String REDISLOGINTOKENPREFIX;
 
-    public TokenVerifyFilter(RsaKeyProperties rsaKeyProperties) {
-//        super(authenticationManager);
+    public TokenVerifyFilter(MyAuthenticationProvider authenticationManager,RsaKeyProperties rsaKeyProperties,RedisUtils redisUtils) {
+        super(authenticationManager);
+        this.redisUtils = redisUtils;
         this.rsaKeyProperties = rsaKeyProperties;
     }
     public void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException {
         String header = request.getHeader("Authorization");
         if (header == null || !header.startsWith("Bearer ")) {
             //如果携带错误的token，则给用户提示请登录！
-            response.setContentType("application/json;charset=utf-8");
-            response.setStatus(HttpServletResponse.SC_FORBIDDEN);
-            PrintWriter out = response.getWriter();
-            Map<String,Object> resultMap = new HashMap<String,Object>(){
-                {
-                    put("code", HttpServletResponse.SC_FORBIDDEN);
-                    put("msg", "请登录！");
-                }
-            };
-
-            out.write(new ObjectMapper().writeValueAsString(resultMap));
-            out.flush();
-            out.close();
-//            chain.doFilter(request, response);
+//            response.setContentType("application/json;charset=utf-8");
+//            response.setStatus(HttpServletResponse.SC_FORBIDDEN);
+//            PrintWriter out = response.getWriter();
+//            Map<String,Object> resultMap = new HashMap<String,Object>(){
+//                {
+//                    put("code", HttpServletResponse.SC_FORBIDDEN);
+//                    put("msg", "请登录！");
+//                }
+//            };
+//
+//            out.write(new ObjectMapper().writeValueAsString(resultMap));
+//            out.flush();
+//            out.close();
+            chain.doFilter(request, response);
         } else {
             //如果携带了正确格式的token要先得到token
             String token = header.replace("Bearer ", "");

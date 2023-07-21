@@ -43,7 +43,7 @@ public class BodyReaderHttpServletRequestWrapper extends HttpServletRequestWrapp
     public Enumeration<String> getHeaders(String name) {
         List<String> values = Collections.list(super.getHeaders(name));
         if (headerMap.containsKey(name)) {
-            values = Arrays.asList(headerMap.get(name));
+            values = Collections.singletonList(headerMap.get(name));
         }
         return Collections.enumeration(values);
     }
@@ -61,17 +61,10 @@ public class BodyReaderHttpServletRequestWrapper extends HttpServletRequestWrapp
                 while ((bytesRead = bufferedReader.read(charBuffer)) > 0) {
                     stringBuilder.append(charBuffer, 0, bytesRead);
                 }
-            } else {
             }
-        } catch (IOException ex) {
-            throw ex;
         } finally {
             if (bufferedReader != null) {
-                try {
-                    bufferedReader.close();
-                } catch (IOException ex) {
-                    throw ex;
-                }
+                bufferedReader.close();
             }
         }
         body = stringBuilder.toString();
