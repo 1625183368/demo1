@@ -24,6 +24,7 @@ public class ThreadPoolConfig {
     // 线程池维护线程所允许的空闲时间
     private String keepAliveSeconds;
 
+
     @Bean(name = "threadPoolTaskExecutor")
     public ThreadPoolTaskExecutor threadPoolTaskExecutor() {
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();

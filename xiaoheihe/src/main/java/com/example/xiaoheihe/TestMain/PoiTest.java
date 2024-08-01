@@ -1,21 +1,17 @@
 package com.example.xiaoheihe.TestMain;
 
 import com.deepoove.poi.XWPFTemplate;
-import com.deepoove.poi.data.*;
-import com.deepoove.poi.data.style.CellStyle;
-import com.deepoove.poi.data.style.RowStyle;
-import javafx.scene.paint.Color;
-import sun.plugin2.util.ColorUtil;
+import com.deepoove.poi.data.MergeCellRule;
+import com.deepoove.poi.data.RowRenderData;
+import com.deepoove.poi.data.Rows;
+import com.deepoove.poi.data.Tables;
 
-import java.awt.*;
-import java.awt.color.ColorSpace;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Optional;
 
 public class PoiTest {
 //    public static void main(String[] args) throws IOException {

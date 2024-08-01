@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.Map;
 
 @Component
-public class DemoBean implements BeanNameAware, BeanFactoryAware, ApplicationContextAware,InitializingBean,BeanDefinitionRegistryPostProcessor, BeanPostProcessor,DisposableBean,FactoryBean {
+public class DemoBean implements BeanNameAware, BeanFactoryAware, ApplicationContextAware,InitializingBean, BeanPostProcessor,DisposableBean,FactoryBean {
     private final Map<String, Long> stats = new HashMap<>();
     private final List<ExplainBean> explainBeans = new ArrayList<>();
 
@@ -44,20 +44,7 @@ public class DemoBean implements BeanNameAware, BeanFactoryAware, ApplicationCon
         System.out.println("afterPropertiesSet");
     }
 
-    //BeanFactoryPostProcessor
-    @SneakyThrows
-    @Override
-    public void postProcessBeanDefinitionRegistry(BeanDefinitionRegistry registry) throws BeansException {
-        System.out.println("BeanFactoryPostProcessor1");
-//        System.out.println("BeanFactoryPostProcessor1: " +registry.containsBeanDefinition(name));
-    }
 
-    //BeanFactoryPostProcessor
-    @Override
-    public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
-        System.out.println("BeanFactoryPostProcessor2");
-//        System.out.println("BeanFactoryPostProcessor: " + beanFactory.containsBean(name));
-    }
     //BeanPostProcessor
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
@@ -76,6 +63,8 @@ public class DemoBean implements BeanNameAware, BeanFactoryAware, ApplicationCon
         return bean;
     }
 
+
+
     //FactoryBean
     @Override
     public Object getObject() {
@@ -85,17 +74,17 @@ public class DemoBean implements BeanNameAware, BeanFactoryAware, ApplicationCon
 
     @Override
     public Class<?> getObjectType() {
-        return null;
+        return DemoBean.class;
     }
 
     @Override
     public boolean isSingleton() {
-        return false;
+        return true;
     }
     //DisposableBean
     @Override
     public void destroy() throws Exception {
-//        System.out.println(name + "---卸载完成");
+        System.out.println("demobean" + "---卸载完成");
     }
 
     public List<ExplainBean> getExplainBeans(){

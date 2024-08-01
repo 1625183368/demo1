@@ -4,7 +4,7 @@ package com.example.xiaoheihe.controller;
 import com.alibaba.fastjson.JSONObject;
 import com.example.xiaoheihe.domain.Demo;
 import com.example.xiaoheihe.domain.DemoBean;
-import com.example.xiaoheihe.domain.DemoBean2;
+//import com.example.xiaoheihe.domain.DemoBean2;
 import com.example.xiaoheihe.domain.ExplainBean;
 import com.example.xiaoheihe.resultEntity.Result;
 import com.example.xiaoheihe.service.DemoService;

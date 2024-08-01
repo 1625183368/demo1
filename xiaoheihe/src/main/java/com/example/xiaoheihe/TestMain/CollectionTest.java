@@ -6,6 +6,7 @@ import org.apache.ibatis.jdbc.Null;
 
 import java.util.ArrayList;
 import java.util.Map;
+import java.util.Random;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.stream.Collectors;
@@ -27,6 +28,10 @@ public class CollectionTest {
 //        s = map.computeIfAbsent("name", k -> new String("dvvfr"));
 //        Thread.sleep(2000);
 //        System.out.println(s);
+        int a = 2147483647;
+        long d = 2147483649L;
+        long c = (d + a);
+        System.out.println(c);
     }
 
 }

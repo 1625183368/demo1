@@ -7,8 +7,8 @@ import java.nio.channels.SocketChannel;
 
 public class NioClient1 {
 
-    public static void main(String[] args) throws IOException {
-        //1 得到一个Socker连接
+    public static void main(String[] args) throws IOException, InterruptedException {
+        //1 得到一个Socket连接
         SocketChannel socketChannel = SocketChannel.open();
         //2 配置非阻塞
         socketChannel.configureBlocking(false);
@@ -22,11 +22,13 @@ public class NioClient1 {
             }
         }
         //写入数据
+        while (true) {
+            ByteBuffer byteBuffer = ByteBuffer.wrap("Hello Netty!!!".getBytes());
+            socketChannel.write(byteBuffer);
 
-        ByteBuffer byteBuffer = ByteBuffer.wrap("Hello Netty!!!".getBytes());
-        socketChannel.write(byteBuffer);
-
-        System.in.read();
-        System.out.println("客户端完成工作");
+            System.in.read();
+            System.out.println("客户端完成工作");
+            Thread.sleep(1000);
+        }
     }
 }

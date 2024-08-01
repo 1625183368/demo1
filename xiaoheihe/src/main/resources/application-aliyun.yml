@@ -15,30 +15,38 @@ spring:
         url-pattern: /druid/*
         login-username: mxx
         login-password: 123456
-        # 主库数据源
+      # 主库数据源
       master:
-        url: jdbc:mysql://192.168.11.4:3306/test?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
-        username: root
-        password: 1234
+        url: jdbc:mysql://121.43.117.138:3307/test?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+        username: mxx
+        password: 12345
         # 从库数据源
       slave:
-          # 从数据源开关/默认关闭
+        # 从数据源开关/默认关闭
         enabled: false
         url:
         username:
         password:
   redis:
-    host: localhost
+    host: 121.43.117.138
     port: 6379
     password:
     database: 10
-
 
     login:
       token:
         prefix: REDIS_LOGIN_TOKEN_
         timeout: 60
         timeunit: SECONDS
+
+  rabbitmq:
+    host: 192.168.202.129
+    port: 5672
+    username: root
+    password: 123456
+    virtual-host: rabbitMQ01
+
+
 logging:
   level:
     com.example: debug
@@ -61,13 +69,7 @@ rsa:
     priKeyFile: /config/auth_key/id_key_rsa
 
 securityUrlConfig:
-  ignoreUrl: "/login.jsp,/failuer.jsp,/css/**,/img/**,/demo/download"
+  ignoreUrl: "/login.jsp,/failuer.jsp,/css/**,/img/**"
 
 
-oss:
-  accessKeyId: LTAIiFezBad57uXs
-  accessKeySecret: yWhTGpXIAnPLkrMbsDNZBJOezFfCvF
-  endpoint: https://oss-cn-shanghai.aliyuncs.com
-  bucketName: yanxiaoneng
-  url: https://yanxiaoneng.oss-cn-shanghai.aliyuncs.com/
-  filePath: safety_tool/templates
+

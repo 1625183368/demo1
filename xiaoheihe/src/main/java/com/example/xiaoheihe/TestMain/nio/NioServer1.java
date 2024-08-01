@@ -44,7 +44,6 @@ public class NioServer1 {
                     //注册到selector
                     socketChannel.register(selector, SelectionKey.OP_READ, ByteBuffer.allocate(1024));
                     System.out.println("有client连接请求过来");
-
                 }
                 if (key.isReadable()) {
                     //读取客户端事件
